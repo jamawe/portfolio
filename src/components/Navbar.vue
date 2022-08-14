@@ -90,13 +90,15 @@ function toggleTheme(e) {
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
+                margin-top: .5rem;
+                margin-bottom: .5rem;
                 background-color: transparent;
                 border: none;
                 cursor: pointer;
 
                 svg {
-                    height: 1.125rem;
-                    width: 1.125rem;
+                    height: 1.25rem;
+                    width: 1.25rem;
                 }
             }
 
