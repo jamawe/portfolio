@@ -36,10 +36,14 @@ function toggleTheme(e) {
     <nav class="navbar">
         <!-- <div class="navbar__brand">BrandName</div> -->
          <div class="navbar__toggle">
-            <button @click="showMenu=!showMenu" class="navbar__toggle__button" type="button">
-                <IconMenu v-if="!showMenu" />
-                <IconClose v-else />
-            </button>
+            <Transition name="slide-down">
+                <button v-if="!showMenu" @click="showMenu=!showMenu" class="navbar__toggle__button" type="button">
+                        <IconMenu />
+                </button>
+                <button v-else-if="showMenu" @click="showMenu=!showMenu" class="navbar__toggle__button" type="button">
+                        <IconClose />
+                </button>
+            </Transition>
         </div>
 
         <ul :class="{'navbar__list--hidden': !showMenu}" class="navbar__list">
@@ -80,25 +84,34 @@ function toggleTheme(e) {
         width: 100%;
 
         // &__brand {
-        //     width: 20%;
+        //     width: 20%; /* toggle: 80, button: float right */
         // }
 
         &__toggle {
-            width: 100%; /* brand: 20, toggle: 80, button: float right */
+            position: relative;
+            height: var(--navbar-toggle-size);
+            width: var(--navbar-toggle-size);
+            margin-left: auto;
+            margin-right: auto;
             
             &__button {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: .5rem;
-                margin-bottom: .5rem;
+                position: absolute;
+                /* absolute center in parent (navbar__toggle):
+                   - parent needs static height and width (--navbar-toggle-size)
+                   - child (navbar__toggle__button / svg) needs static width and height (--navbar-toggle-button-size)
+                   - calculation: (parent size - child size) / 2
+                   - NOTE: Remove all padding and margin from child
+                */ 
+                left: calc(calc(var(--navbar-toggle-size) - var(--navbar-toggle-button-size)) / 2);
+                top: calc(calc(var(--navbar-toggle-size) - var(--navbar-toggle-button-size)) / 2);
                 background-color: transparent;
+                padding: 0;
                 border: none;
                 cursor: pointer;
 
                 svg {
-                    height: 1.25rem;
-                    width: 1.25rem;
+                    height: var(--navbar-toggle-button-size);
+                    width: var(--navbar-toggle-button-size);
                 }
             }
 
@@ -112,9 +125,10 @@ function toggleTheme(e) {
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 1rem;
+            margin-top: 2rem;
             margin-bottom: 1rem;
             list-style-type: none;
             padding-inline-start: 0; /* Remove left side padding of list items */
@@ -128,8 +142,11 @@ function toggleTheme(e) {
             @include tablet-landscape {
                 display: flex;
                 flex-direction: row;
-                margin-right: 0;
-                margin-top: 0;
+                justify-content: center;
+                /* to achieve same margin as absolute top value of menu button */
+                margin-top: calc(calc(var(--toggle-container-size) - var(--menu-icon-size)) / 2);
+                margin-left: auto;
+                margin-right: auto;
             }
 
             &__item {
@@ -158,5 +175,23 @@ function toggleTheme(e) {
 
 
         }
-   } 
+   }
+
+    .slide-down-enter-active {
+        transition: all 500ms ease-in-out;
+    }
+
+    .slide-down-leave-active {
+        transition: all 200ms ease-out;
+    }
+
+    .slide-down-enter-from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    .slide-down-leave-to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
 </style>
