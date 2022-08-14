@@ -11,9 +11,6 @@ import Navbar from './components/Navbar.vue';
 </template>
 
 <style scoped>
-.main {
-  padding: 5%;
-}
 /* header {
   line-height: 1.5;
   max-height: 100vh;
