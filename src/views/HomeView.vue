@@ -1,7 +1,10 @@
 <script setup>
+import HeroSection from '../components/HeroSection.vue';
+import ProjectGrid from '../components/ProjectGrid.vue';
 
 </script>
 
 <template>
-  <div>Hi this is the Home view!</div>
+  <HeroSection />
+  <!-- <ProjectGrid /> -->
 </template>
