@@ -60,6 +60,9 @@
   --surface3: #ffffff;
 
   --text: #252323;
+
+  --theme-icon-color-light: #202256;
+  --theme-icon-color-intense: #1a1fa3;
 }
 
 :root[color-theme="dark"] {
@@ -72,6 +75,9 @@
   /*--surface3: #3D3A3A; */
 
   --text: hsla(0, 0%, 100%, .87);
+
+  --theme-icon-color-light: #dcd097;
+  --theme-icon-color-intense: #e6c000;
 }
 
 *,

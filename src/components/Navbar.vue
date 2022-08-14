@@ -58,12 +58,12 @@ function toggleTheme(e) {
             </li>
             <li v-if="!darkTheme" class="navbar__list__item">
                 <button @click="toggleTheme" class="navbar__list__item__button" type="button" data-theme="dark">
-                    <IconMoon />
+                    <IconMoon class="navbar__list__item__button__icon navbar__list__item__button__icon" />
                 </button>
             </li>
             <li v-if="darkTheme" class="navbar__list__item">
                 <button @click="toggleTheme" class="navbar__list__item__button" type="button" data-theme="light">
-                    <IconSun />
+                    <IconSun class="navbar__list__item__button__icon navbar__list__item__button__icon" />
                 </button>
             </li>
         </ul>
@@ -166,9 +166,17 @@ function toggleTheme(e) {
                     vertical-align: middle;
                     cursor: pointer;
 
-                    svg {
+                    &__icon {
                         height: 1.125rem;
                         width: 1.125rem;
+                        transition: all 300ms ease-in;
+                            color: var(--theme-icon-color-light);
+                            filter: drop-shadow( 0 0 5px var(--theme-icon-color-intense));
+
+                            &:hover {
+                                color: var(--theme-icon-color-intense);
+                                filter: drop-shadow( 0 0 7px var(--theme-icon-color-intense)) drop-shadow( 0 0 7px var(--theme-icon-color-intense));
+                            }
                     }
                 }
             }
