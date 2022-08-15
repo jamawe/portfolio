@@ -194,11 +194,10 @@ function toggleTheme(e) {
                         width: 1.125rem;
                         transition: all 300ms ease-in;
                         color: var(--theme-icon-color-light);
-                        filter: drop-shadow( 0 0 5px var(--theme-icon-color-intense));
 
                         &:hover {
                             color: var(--theme-icon-color-intense);
-                            filter: drop-shadow( 0 0 7px var(--theme-icon-color-intense)) drop-shadow( 0 0 7px var(--theme-icon-color-intense));
+                            filter: drop-shadow( 0 0 7px var(--theme-icon-color-intense));
                         }
                     }
                 }
