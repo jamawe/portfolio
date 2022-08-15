@@ -15,6 +15,28 @@ if (colorTheme === 'dark') {
     document.documentElement.setAttribute('color-theme', 'dark');
     darkTheme.value = true;
 }
+let navbar = ref();
+
+function toggleNavbarItems() {
+    // todo: if menu is opened with bp < tablet-landscape + window gets expanded to bp > tablet-landscape bg-color (--surface3) stays
+    // todo cont.: this might have sth to do with how style was set (element.style vs. stylesheet)
+
+    // menu is closed + light theme
+    if (!showMenu.value && !darkTheme.value) {
+        navbar.value.style.backgroundColor = '#ffffff';
+    } 
+    // menu closed + light theme
+    else if (!showMenu.value && darkTheme.value) {
+        navbar.value.style.backgroundColor = '#212121';
+    } 
+    // menu open
+    else {
+        // showMenu is true, then backgroundColor shall be transparent again
+        navbar.value.style.backgroundColor = 'transparent';
+    }
+
+    showMenu.value = !showMenu.value;
+}
 
 // scrollPosition for navbar color change?
 
@@ -33,14 +55,14 @@ function toggleTheme(e) {
 </script>t
 
 <template>
-    <nav class="navbar">
+    <nav class="navbar" ref="navbar">
         <!-- <div class="navbar__brand">BrandName</div> -->
          <div class="navbar__toggle">
             <Transition name="slide-down" mode="out-in">
-                <button v-if="!showMenu" @click="showMenu=!showMenu" class="navbar__toggle__button" type="button">
+                <button v-if="!showMenu" @click="toggleNavbarItems" class="navbar__toggle__button" type="button">
                         <IconMenu />
                 </button>
-                <button v-else-if="showMenu" @click="showMenu=!showMenu" class="navbar__toggle__button" type="button">
+                <button v-else-if="showMenu" @click="toggleNavbarItems" class="navbar__toggle__button" type="button">
                         <IconClose />
                 </button>
             </Transition>
@@ -82,10 +104,15 @@ function toggleTheme(e) {
         z-index: 50;
         padding: .5rem;
         width: 100%;
+        background-color: transparent;
 
         // &__brand {
         //     width: 20%; /* toggle: 80, button: float right */
         // }
+
+        @include tablet-landscape {
+            background-color: transparent;
+        }
 
         &__toggle {
             position: relative;
@@ -93,6 +120,7 @@ function toggleTheme(e) {
             width: var(--navbar-toggle-size);
             margin-left: auto;
             margin-right: auto;
+            overflow: hidden;
             
             &__button {
                 position: absolute;
@@ -128,10 +156,11 @@ function toggleTheme(e) {
             width: 100%;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
             list-style-type: none;
             padding-inline-start: 0; /* Remove left side padding of list items */
+            // background-color: var(--surface3);
 
             /* mobile-first: do not show menu items (!showMenu) */
             &--hidden {
@@ -147,6 +176,8 @@ function toggleTheme(e) {
                 margin-top: calc(calc(var(--toggle-container-size) - var(--menu-icon-size)) / 2);
                 margin-left: auto;
                 margin-right: auto;
+                // padding: 0;
+                background-color: transparent;
             }
 
             &__item {
