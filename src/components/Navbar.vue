@@ -46,27 +46,27 @@ function toggleTheme(e) {
             </Transition>
         </div>
 
-        <ul :class="{'navbar__list--hidden': !showMenu}" class="navbar__list">
-            <li class="navbar__list__item">
-                <router-link class="navbar__list__item__link" to="#">Projects</router-link>
-            </li>
-            <li class="navbar__list__item">
-                <router-link class="navbar__list__item__link" to="#">About</router-link>
-            </li>
-            <li class="navbar__list__item">
-                <router-link class="navbar__list__item__link" to="#">Contact</router-link>
-            </li>
-            <li v-if="!darkTheme" class="navbar__list__item">
-                <button @click="toggleTheme" class="navbar__list__item__button" type="button" data-theme="dark">
-                    <IconMoon class="navbar__list__item__button__icon navbar__list__item__button__icon" />
-                </button>
-            </li>
-            <li v-if="darkTheme" class="navbar__list__item">
-                <button @click="toggleTheme" class="navbar__list__item__button" type="button" data-theme="light">
-                    <IconSun class="navbar__list__item__button__icon navbar__list__item__button__icon" />
-                </button>
-            </li>
-        </ul>
+            <ul :class="{'navbar__list--hidden': !showMenu}" class="navbar__list">
+                <li class="navbar__list__item">
+                    <router-link class="navbar__list__item__link" to="#">Projekte</router-link>
+                </li>
+                <li class="navbar__list__item">
+                    <router-link class="navbar__list__item__link" to="#">Über mich</router-link>
+                </li>
+                <li class="navbar__list__item">
+                    <router-link class="navbar__list__item__link" to="#">Kontakt</router-link>
+                </li>
+                <li v-if="!darkTheme" class="navbar__list__item">
+                    <button @click="toggleTheme" class="navbar__list__item__button" type="button" data-theme="dark">
+                        <IconMoon class="navbar__list__item__button__icon navbar__list__item__button__icon" />
+                    </button>
+                </li>
+                <li v-if="darkTheme" class="navbar__list__item">
+                    <button @click="toggleTheme" class="navbar__list__item__button" type="button" data-theme="light">
+                        <IconSun class="navbar__list__item__button__icon navbar__list__item__button__icon" />
+                    </button>
+                </li>
+            </ul>
 
        
     </nav>
@@ -128,7 +128,7 @@ function toggleTheme(e) {
             width: 100%;
             margin-left: auto;
             margin-right: auto;
-            margin-top: 2rem;
+            margin-top: 1rem;
             margin-bottom: 1rem;
             list-style-type: none;
             padding-inline-start: 0; /* Remove left side padding of list items */
@@ -150,15 +150,38 @@ function toggleTheme(e) {
             }
 
             &__item {
-
+                margin-bottom: .5rem;
                 /* mobile-first */
                 @include tablet-landscape {
                     margin-left: 1rem;
+                    margin-bottom: 0;
                 }
 
-                // &__link {
+                &__link {
+                    position: relative;
+                    color: var(--text);
+                    text-decoration: none;
+                    font-size: 1rem;
+                    text-transform: lowercase;
+                    letter-spacing: .0625rem;
 
-                // }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: .0125rem;
+                        right: .0125rem;
+                        height: 1px;
+                        background: currentColor;
+                        -webkit-transform: scale(0);
+                        transform: scale(0);
+                        transition: transform 150ms ease-in-out;
+                    }
+
+                    &:hover::after {
+                        transform: scale(1);
+                    }
+                }
 
                 &__button {
                     background-color: transparent;
