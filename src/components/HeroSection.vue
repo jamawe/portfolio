@@ -65,6 +65,7 @@
             border-radius: .25rem;
             padding: .75rem 1.5rem;
             cursor: pointer;
+            transition: background-color 200ms ease-in;
 
             &:hover {
                 background-color: var(--surfaceInverseHover);
