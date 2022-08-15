@@ -36,7 +36,7 @@ function toggleTheme(e) {
     <nav class="navbar">
         <!-- <div class="navbar__brand">BrandName</div> -->
          <div class="navbar__toggle">
-            <Transition name="slide-down">
+            <Transition name="slide-down" mode="out-in">
                 <button v-if="!showMenu" @click="showMenu=!showMenu" class="navbar__toggle__button" type="button">
                         <IconMenu />
                 </button>
@@ -208,12 +208,9 @@ function toggleTheme(e) {
         }
    }
 
-    .slide-down-enter-active {
-        transition: all 500ms ease-in-out;
-    }
-
+    .slide-down-enter-active,
     .slide-down-leave-active {
-        transition: all 200ms ease-out;
+        transition: all 150ms ease-in-out;
     }
 
     .slide-down-enter-from {
