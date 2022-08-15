@@ -12,11 +12,10 @@
                 some longer text
             </h1>
             <h2 class="hero__body__subtitle">
-                -- a description of something
+                &mdash; a description of something
             </h2>
-            <button class="hero__body__button" type="button">
-                Über mich
-            </button>
+                <router-link class="hero__body__link" :to="{ name: 'about' }">
+                Über mich</router-link>
         </div>
 
         <div class="hero__footer">
@@ -39,7 +38,6 @@
         padding-left: 5%;
         padding-right: 5%;
         margin-bottom: 25vh;
-        overflow: hidden;
 
         &__title {
             // font-family: Arial, Helvetica, sans-serif;
@@ -52,13 +50,25 @@
             /* h2 24px font-size */
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-style: italic;
+            margin-top: .5rem;
             margin-bottom: 1.5em;
         }
 
-        &__button {
-            font-size: 1.125rem;
-            padding: .5em 1.5em;
+        &__link {
+            font-size: 1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: .05rem;
+            color: var(--textInverse);
+            background-color: var(--surfaceInverse); // todo: accent color
+            border-radius: .25rem;
+            padding: .75rem 1.5rem;
             cursor: pointer;
+
+            &:hover {
+                background-color: var(--surfaceInverseHover);
+            }
         }
     }
 

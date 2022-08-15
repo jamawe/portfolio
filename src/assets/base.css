@@ -61,6 +61,10 @@
 
   --text: #252323;
 
+  --textInverse: #fef9f3;
+  --surfaceInverse: #252323;
+  --surfaceInverseHover: #252323b8;
+
   --theme-icon-color-light: #202256;
   --theme-icon-color-intense: #1a1fa3;
 }
@@ -75,6 +79,10 @@
   /*--surface3: #3D3A3A; */
 
   --text: hsla(0, 0%, 100%, .87);
+  
+  --textInverse: #252323;
+  --surfaceInverse: #fef9f3;
+  --surfaceInverseHover: #fef9f3e1;
 
   --theme-icon-color-light: #dcd097;
   --theme-icon-color-intense: #e6c000;
