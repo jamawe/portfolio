@@ -7,6 +7,7 @@ import IconSun from './icons/IconSun.vue';
 
 let showMenu = ref(false);
 let darkTheme = ref(false);
+let scrolled = ref(false);
 // Get theme set in localStorage
 const colorTheme = JSON.parse(localStorage.getItem('theme')) || '';
 // If dark value theme set in localStorage, assign values to @root and this component's darkTheme accordingly
@@ -16,7 +17,10 @@ if (colorTheme === 'dark') {
     darkTheme.value = true;
 }
 
-// scrollPosition for navbar color change?
+//Listen to scroll in order to toggle navbar bg-color
+window.addEventListener('scroll', () => {
+    scrolled.value = window.scrollY > 50 ? true : false;
+})
 
 function toggleTheme(e) {
     // Find out which button was clicked
@@ -33,7 +37,7 @@ function toggleTheme(e) {
 </script>t
 
 <template>
-    <nav class="navbar">
+    <nav class="navbar" :class="{'navbar--scrolled': scrolled}">
         <!-- <div class="navbar__brand">BrandName</div> -->
          <div class="navbar__toggle">
             <Transition name="slide-down" mode="out-in">
@@ -83,14 +87,19 @@ function toggleTheme(e) {
         padding: .5rem;
         width: 100%;
         background-color: transparent;
+        transition: all 500ms ease-in-out;
+
+        &--scrolled {
+            background-color: var(--surface3);
+        }
 
         // &__brand {
         //     width: 20%; /* toggle: 80, button: float right */
         // }
 
-        @include tablet-landscape {
-            background-color: transparent;
-        }
+        // @include tablet-landscape {
+        //     background-color: transparent;
+        // }
 
         &__toggle {
             position: relative;
@@ -201,7 +210,7 @@ function toggleTheme(e) {
                     &__icon {
                         height: 1.125rem;
                         width: 1.125rem;
-                        transition: all 300ms ease-in;
+                        transition: all 100ms ease-in;
                         color: var(--theme-icon-color-light);
 
                         &:hover {
