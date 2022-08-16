@@ -5,6 +5,7 @@ const AboutView = () => import('../views/AboutView.vue');
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+
   routes: [
     {
       path: '/',
@@ -17,7 +18,25 @@ const router = createRouter({
       component: AboutView
     },
 
-  ]
+  ],
+
+  scrollBehavior(to, from, savedPosition) {
+    if (to.hash) {
+      if (to.hash) {
+        return {
+          el: to.hash,
+          behavior: 'smooth',
+          // Since navbar is sticky add scroll top position for hashes
+          top: 100,
+        }
+      } else if (savedPosition) {
+        return savedPosition;
+      } else {
+        return { top: 0 }
+      }
+      
+    }
+  },
 })
 
 export default router

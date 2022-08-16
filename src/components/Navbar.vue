@@ -48,7 +48,7 @@ function toggleTheme(e) {
 
             <ul :class="{'navbar__list--hidden': !showMenu}" class="navbar__list">
                 <li class="navbar__list__item">
-                    <router-link class="navbar__list__item__link" to="#">Projekte</router-link>
+                    <router-link class="navbar__list__item__link" :to="{ name: 'home', hash: '#projects' }">Projekte</router-link>
                 </li>
                 <li class="navbar__list__item">
                     <router-link class="navbar__list__item__link" to="#">Über mich</router-link>

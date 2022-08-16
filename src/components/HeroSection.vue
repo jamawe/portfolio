@@ -19,7 +19,7 @@
         </div>
 
         <div class="hero__footer">
-            <router-link class="hero__footer__link" to="#">Projekte</router-link>
+            <router-link class="hero__footer__link" :to="{ name: 'home', hash: '#projects' }">Projekte</router-link>
         </div>
     </div>
 </template>

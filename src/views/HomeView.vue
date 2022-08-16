@@ -6,5 +6,5 @@ import ProjectGrid from '../components/ProjectGrid.vue';
 
 <template>
   <HeroSection />
-  <!-- <ProjectGrid /> -->
+  <ProjectGrid />
 </template>
