@@ -1,5 +1,5 @@
 <script setup>
-
+import IconChevronDoubleDown from './icons/IconChevronDoubleDown.vue';
 </script>
 
 <template>
@@ -19,7 +19,9 @@
         </div>
 
         <div class="hero__footer">
-            <router-link class="hero__footer__link" :to="{ name: 'home', hash: '#projects' }">Projekte</router-link>
+            <router-link class="hero__footer__link" :to="{ name: 'home', hash: '#projects' }">
+                <IconChevronDoubleDown class="hero__footer__link__icon" />
+            </router-link>
         </div>
     </div>
 </template>
@@ -84,20 +86,30 @@
             margin-left: auto;
             margin-right: auto;
 
-            &::before {
-                content: '';
-                background-color: lightgreen; /* TODO: colors! */
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 100%;
-                height: 4px;
-                z-index: -1;
-                transition: all 200ms ease-in-out
-            }
+            /* 
+                Cute transition from when 
+                link was text and not an icon:
+            */
 
-            &:hover::before {
-                height: 100%;
+            // &::before {
+            //     content: '';
+            //     background-color: lightgreen; /* TODO: colors! */
+            //     position: absolute;
+            //     left: 0;
+            //     bottom: 4px;
+            //     width: 3px;
+            //     height: 100%;
+            //     z-index: -1;
+            //     transition: all 200ms ease-in-out;
+            // }
+
+            // &:hover::before {
+            //     width: 100%;
+            // }
+
+            &__icon {
+                height: 1.375rem;
+                width: 1.375rem;
             }
         }
     }
