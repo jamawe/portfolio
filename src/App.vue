@@ -4,13 +4,18 @@ import Navbar from './components/Navbar.vue';
 </script>
 
 <template>
-  <Navbar />
+  <Navbar/>
   <main class="main">
     <RouterView />
   </main>
 </template>
 
 <style scoped>
+.main {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* header {
   line-height: 1.5;
   max-height: 100vh;

@@ -27,14 +27,12 @@
 <style scoped lang="scss">
 .hero {
     position: relative;
-    height: 100vh;
+    height: calc(100vh - 64px); /* TODO: Get height of navbar component in App.vue and pass it to routerview as prop */
     display: flex;
     justify-content: center;
     align-items: center;
 
     &__body {
-        width: 100%;
-        max-width: 50rem; /* TODO: Set on main? in App.vue */
         padding-left: 5%;
         padding-right: 5%;
         margin-bottom: 25vh;
