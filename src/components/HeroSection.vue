@@ -63,7 +63,7 @@
             border-radius: .25rem;
             padding: .75rem 1.5rem;
             cursor: pointer;
-            transition: background-color 200ms ease-in;
+            transition: background-color 200ms ease-in-out;
 
             &:hover {
                 background-color: var(--surfaceInverseHover);
@@ -76,8 +76,29 @@
         bottom: 10%;
 
         &__link {
+            position: relative;
+            text-decoration: none;
+            text-transform: lowercase;
+            color: var(--text);
+            letter-spacing: .0625rem;
             margin-left: auto;
             margin-right: auto;
+
+            &::before {
+                content: '';
+                background-color: lightgreen; /* TODO: colors! */
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 4px;
+                z-index: -1;
+                transition: all 200ms ease-in-out
+            }
+
+            &:hover::before {
+                height: 100%;
+            }
         }
     }
 
