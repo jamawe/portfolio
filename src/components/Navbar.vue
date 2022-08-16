@@ -97,10 +97,6 @@ function toggleTheme(e) {
         //     width: 20%; /* toggle: 80, button: float right */
         // }
 
-        // @include tablet-landscape {
-        //     background-color: transparent;
-        // }
-
         &__toggle {
             position: relative;
             height: var(--navbar-toggle-size);
@@ -161,8 +157,6 @@ function toggleTheme(e) {
                 justify-content: center;
                 /* to achieve same margin as absolute top value of menu button */
                 margin-top: calc(calc(var(--toggle-container-size) - var(--menu-icon-size)) / 2);
-                margin-left: auto;
-                margin-right: auto;
                 // padding: 0;
                 background-color: transparent;
             }
