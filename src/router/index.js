@@ -27,7 +27,7 @@ const router = createRouter({
           el: to.hash,
           behavior: 'smooth',
           // Since navbar is sticky add scroll top position for hashes
-          top: 100,
+          top: 75,
         }
       } else if (savedPosition) {
         return savedPosition;

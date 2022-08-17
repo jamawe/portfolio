@@ -73,7 +73,6 @@ function openOverlay() {
 <style lang="scss" scoped>
 .projects {
     padding: 5%;
-    border: 1px solid gray;
 
     &__header {
 
@@ -82,6 +81,8 @@ function openOverlay() {
             font-size: clamp(1rem, 10vw + 1rem, 2rem); /* h1 32px */
             line-height: 110%;
             text-transform: lowercase;
+            text-align: center;
+            margin-bottom: 10%;
         }
     }
 
@@ -107,12 +108,10 @@ function openOverlay() {
 
             display: flex;
             flex-direction: column;
-            // align-items: flex-end;
 
             width: 90%;
             height: min(40vh, 400px); // default, largest // TODO: responsiveness
-            // padding-bottom: 5%;
-            margin-bottom: 10%;
+            margin-bottom: 20%;
 
             &:nth-of-type(2n) {
                 /*
@@ -121,7 +120,6 @@ function openOverlay() {
                     grid-column-end: 12;
                 */
                 align-self: flex-start;
-                // align-items: flex-start;
             }
 
             &:last-of-type {
@@ -163,7 +161,6 @@ function openOverlay() {
                     right: 5%;
                     width: 100px;
                     height: 3rem;
-                    // background-color: rgba(gray, .2);
                     z-index: 1;
 
                     &__link {
