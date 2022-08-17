@@ -52,21 +52,21 @@ function toggleTheme(e) {
 
             <ul :class="{'navbar__list--hidden': !showMenu}" class="navbar__list">
                 <li class="navbar__list__item">
-                    <router-link class="navbar__list__item__link" :to="{ name: 'home', hash: '#projects' }">Projekte</router-link>
+                    <router-link class="navbar__list__item__link" :to="{ name: 'home', hash: '#projects' }" title="Projekte">Projekte</router-link>
                 </li>
                 <li class="navbar__list__item">
-                    <router-link class="navbar__list__item__link" to="#">Über mich</router-link>
+                    <router-link class="navbar__list__item__link" to="#" title="Über mich">Über mich</router-link>
                 </li>
                 <li class="navbar__list__item">
-                    <router-link class="navbar__list__item__link" to="#">Kontakt</router-link>
+                    <router-link class="navbar__list__item__link" to="#" title="Kontakt">Kontakt</router-link>
                 </li>
                 <li v-if="!darkTheme" class="navbar__list__item">
-                    <button @click="toggleTheme" class="navbar__list__item__button" type="button" data-theme="dark">
+                    <button @click="toggleTheme" class="navbar__list__item__button" type="button" data-theme="dark" title="Zu dunklem Modus wechseln">
                         <IconMoon class="navbar__list__item__button__icon navbar__list__item__button__icon" />
                     </button>
                 </li>
                 <li v-if="darkTheme" class="navbar__list__item">
-                    <button @click="toggleTheme" class="navbar__list__item__button" type="button" data-theme="light">
+                    <button @click="toggleTheme" class="navbar__list__item__button" type="button" data-theme="light" title="Zu hellem Modus wechseln">
                         <IconSun class="navbar__list__item__button__icon navbar__list__item__button__icon" />
                     </button>
                 </li>
