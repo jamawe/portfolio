@@ -75,16 +75,45 @@ import IconChevronDoubleDown from './icons/IconChevronDoubleDown.vue';
 
     &__footer {
         position: absolute;
-        bottom: 10%;
+        bottom: 12.5%;
+
+        @include tablet {
+            bottom: 5%;
+        }
 
         &__link {
             position: relative;
+            display: block; // Needed for animation
             text-decoration: none;
             text-transform: lowercase;
             color: var(--text);
             letter-spacing: .0625rem;
             margin-left: auto;
             margin-right: auto;
+
+            animation-name: bounce;
+            animation-duration: 1500ms;
+            animation-delay: 500ms;
+            animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+            animation-iteration-count: infinite;
+
+            @keyframes bounce {
+                70% { 
+                    transform:translateY(0%); 
+                }
+                80% { 
+                    transform:translateY(30%); //15
+                }
+                90% { 
+                    transform:translateY(0%); 
+                }
+                95% { 
+                    transform:translateY(14%); // 7
+                }
+                100% { 
+                    transform:translateY(0); 
+                }
+            }
 
             /* 
                 Cute transition from when 
