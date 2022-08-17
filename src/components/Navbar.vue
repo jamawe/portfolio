@@ -196,21 +196,41 @@ function toggleTheme(e) {
                 }
 
                 &__button {
+                    position: relative;
                     background-color: transparent;
                     border: none;
                     vertical-align: middle;
+                    height: 1.5rem;
+                    width: 1.5rem;
                     cursor: pointer;
 
+                    &::before {
+                        content: '';
+                        background-color: var(--theme-icon-bg-light); /* TODO: colors! */
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        border-radius: 50%;
+                        width: 100%;
+                        height: 100%;
+                        transform: scale(0);
+                        transition: all 200ms cubic-bezier(.17,.67,1,1.23);
+                    }
+
+                    &:hover::before {
+                        transform: scale(1);
+                    }
+
                     &__icon {
+                        position: absolute;
+                        top: calc(calc(1.5rem - 1.125rem) / 2);
+                        left: calc(calc(1.5rem - 1.125rem) / 2);
                         height: 1.125rem;
                         width: 1.125rem;
-                        transition: all 100ms ease-in;
+                        border-radius: 50%;
                         color: var(--theme-icon-color-light);
-
-                        &:hover {
-                            color: var(--theme-icon-color-intense);
-                            filter: drop-shadow( 0 0 7px var(--theme-icon-color-intense));
-                        }
                     }
                 }
             }
@@ -221,7 +241,7 @@ function toggleTheme(e) {
 
     .slide-down-enter-active,
     .slide-down-leave-active {
-        transition: all 150ms ease-in-out;
+        transition: all 150ms cubic-bezier(.17,.67,1,1.23);
     }
 
     .slide-down-enter-from {
