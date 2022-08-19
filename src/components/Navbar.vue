@@ -77,7 +77,7 @@ watch(
                     <router-link class="navbar__list__item__link" :to="{ name: 'about' }" title="Über mich">Über</router-link>
                 </li>
                 <li @click="showMenu = !showMenu" class="navbar__list__item">
-                    <router-link class="navbar__list__item__link" to="#" title="Kontakt">Kontakt</router-link>
+                    <router-link class="navbar__list__item__link" :to="{ name: 'contact' }" title="Kontakt">Kontakt</router-link>
                 </li>
                 <li v-if="!darkTheme" class="navbar__list__item">
                     <button @click="toggleTheme" class="navbar__list__item__button" type="button" data-theme="dark" title="Zu dunklem Modus wechseln">
