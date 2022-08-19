@@ -133,12 +133,10 @@ function fallbackCopyEmailToClipboard(email) {
                         margin-right: 1rem;
 
                         &:last-of-type {
-                        margin-right: 0;
-                    }
+                            margin-right: 0;
+                        }
                     }
                 }
-
-                
             }
         }
 
