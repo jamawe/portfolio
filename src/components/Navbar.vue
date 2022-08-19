@@ -1,13 +1,16 @@
 <script setup>
-import { onMounted, ref, toRef } from 'vue';
+import { onMounted, ref, toRef, watch } from 'vue';
+import { useRoute } from 'vue-router';
 import IconMenu from './icons/IconMenu.vue';
 import IconClose from './icons/IconClose.vue';
 import IconMoon from './icons/IconMoon.vue';
 import IconSun from './icons/IconSun.vue';
 
 let showMenu = ref(false);
+const route = useRoute();
+let onHomeRoute = ref(true);
+
 let darkTheme = ref(false);
-let scrolled = ref(false);
 // Get theme set in localStorage
 const colorTheme = JSON.parse(localStorage.getItem('theme')) || '';
 // If dark value theme set in localStorage, assign values to @root and this component's darkTheme accordingly
@@ -17,6 +20,7 @@ if (colorTheme === 'dark') {
     darkTheme.value = true;
 }
 
+let scrolled = ref(false);
 //Listen to scroll in order to toggle navbar bg-color
 window.addEventListener('scroll', () => {
     scrolled.value = window.scrollY > 50 ? true : false;
@@ -25,15 +29,27 @@ window.addEventListener('scroll', () => {
 function toggleTheme(e) {
     // Find out which button was clicked
     const theme = e.currentTarget.dataset.theme;
+
     // Set color-theme @root
     document.documentElement.setAttribute('color-theme', `${theme}`);
+
     // Toggle this component's darkTheme value in order to toggle theme buttons
     theme === 'dark' ? darkTheme.value = true : darkTheme.value = false;
+
     // Set theme in localStorage
     localStorage.setItem('theme', JSON.stringify(theme));
+
     // In case menu is expanded, close it
     if (showMenu.value) showMenu.value = !showMenu.value;
 }
+
+// Watch route.name in order to toggle home link in menu
+watch(
+    () => route.name,
+    newRoute => {
+        onHomeRoute.value = newRoute === 'home' ? true : false;
+    }
+);
 </script>t
 
 <template>
@@ -51,13 +67,16 @@ function toggleTheme(e) {
         </div>
 
             <ul :class="{'navbar__list--hidden': !showMenu}" class="navbar__list">
-                <li class="navbar__list__item">
+                <li v-if="!onHomeRoute" @click="showMenu = !showMenu" class="navbar__list__item">
+                    <router-link class="navbar__list__item__link" :to="{ name: 'home' }" title="Zur Startseite">Home</router-link>
+                </li>
+                <li @click="showMenu = !showMenu" class="navbar__list__item">
                     <router-link class="navbar__list__item__link" :to="{ name: 'home', hash: '#projects' }" title="Projekte">Projekte</router-link>
                 </li>
-                <li class="navbar__list__item">
-                    <router-link class="navbar__list__item__link" to="#" title="Über mich">Über mich</router-link>
+                <li @click="showMenu = !showMenu" class="navbar__list__item">
+                    <router-link class="navbar__list__item__link" :to="{ name: 'about' }" title="Über mich">Über</router-link>
                 </li>
-                <li class="navbar__list__item">
+                <li @click="showMenu = !showMenu" class="navbar__list__item">
                     <router-link class="navbar__list__item__link" to="#" title="Kontakt">Kontakt</router-link>
                 </li>
                 <li v-if="!darkTheme" class="navbar__list__item">
@@ -185,7 +204,6 @@ function toggleTheme(e) {
                         right: .0125rem;
                         height: 1px;
                         background: currentColor;
-                        -webkit-transform: scale(0);
                         transform: scale(0);
                         transition: transform 150ms ease-in-out;
                     }
