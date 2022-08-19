@@ -82,11 +82,15 @@ function fallbackCopyEmailToClipboard(email) {
     padding-left: 5%;
     padding-right: 5%;
     margin-top: 10%;
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
     font-family: 'Monaco', monospace;
 
     @include tablet {
         grid-template-columns: repeat(6, 1fr);
-        padding: 5%;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     &__section {
@@ -123,6 +127,7 @@ function fallbackCopyEmailToClipboard(email) {
             }
 
             &__item {
+                white-space: nowrap;
 
                 &::before {
                     content: '—';
@@ -146,6 +151,7 @@ function fallbackCopyEmailToClipboard(email) {
 
             @include tablet-landscape {
                 flex-direction: row;
+                align-items: flex-start;
             }
 
             &__row {
