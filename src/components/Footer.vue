@@ -41,9 +41,9 @@ function fallbackCopyEmailToClipboard(email) {
                 <li
                     v-for="(item, i) in stack"
                     class="footer__section__list__item">
-                        &mdash; {{ item }}
+                        {{ item }}
                 </li>
-                <li class="footer__section__list__item">&mdash; &#9749;</li>
+                <li class="footer__section__list__item">&#9749;</li>
             </ul>
         </div>
         <div class="footer__section">
@@ -56,7 +56,7 @@ function fallbackCopyEmailToClipboard(email) {
                     </div>
                     <div class="footer__section__container__row">
                         <a class="footer__section__container__row__link" href="mailto:jana.wernick@gmail.com">
-                            jana.wernick@gmail.com
+                            Schreibt mir! 
                         </a>
                         <button 
                         @click="copyEmailToClipboard" 
@@ -75,20 +75,42 @@ function fallbackCopyEmailToClipboard(email) {
 <style lang="scss" scoped>
 .footer {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
     gap: 5%;
-    height: min(25vh, 400px);
-    padding: 5%;
+    // height: min(25vh, 400px);
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     margin-top: 10%;
     font-family: 'Monaco', monospace;
 
+    @include tablet {
+        grid-template-columns: repeat(6, 1fr);
+        padding: 5%;
+    }
+
     &__section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         height: 100%;
-        grid-column: span 3;
+        margin-bottom: 2rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+            
+        }
+
+        @include tablet {
+            grid-column: span 3;
+        }
 
         &__title {
             font-weight: bold;
+            font-size: 1.125rem;
             letter-spacing: .25ch;
+            margin-left: auto;
+            margin-right: auto;
             margin-bottom: 1rem;
         }
 
@@ -96,20 +118,55 @@ function fallbackCopyEmailToClipboard(email) {
             list-style-type: none;
             padding-inline-start: 0;
 
-            // &__item {
-            // }
+            @include tablet-landscape {
+                display: flex;
+            }
+
+            &__item {
+
+                &::before {
+                    content: '—';
+                    margin-right: .5rem;
+
+                    @include tablet-landscape {
+                        content: '';
+                        margin-right: 1rem;
+
+                        &:last-of-type {
+                        margin-right: 0;
+                    }
+                    }
+                }
+
+                
+            }
         }
 
         &__container {
             display: flex;
             flex-direction: column;
 
+            @include tablet-landscape {
+                flex-direction: row;
+            }
+
             &__row {
                 display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: .5rem;
+
+                @include tablet-landscape {
+                    margin-right: 1rem;
+
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                }
 
                 &__link {
                     color: var(--text);
-                    margin-right: 1rem;
+                    margin-right: .5rem;
                     margin-bottom: .5rem;
 
                     &__icon {
@@ -129,7 +186,6 @@ function fallbackCopyEmailToClipboard(email) {
                     height: 1.75rem;
                     width: 1.75rem;
                     cursor: pointer;
-                    margin-right: 1rem;
                     margin-bottom: .5rem;
 
                     &::before {
@@ -153,10 +209,10 @@ function fallbackCopyEmailToClipboard(email) {
 
                     &__icon {
                         position: absolute;
-                        top: calc(calc(1.75rem - 1.125rem) / 2);
-                        left: calc(calc(1.75rem - 1.125rem) / 2);
-                        height: 1.125rem;
-                        width: 1.125rem;
+                        top: calc(calc(1.75rem - 1.25rem) / 2);
+                        left: calc(calc(1.75rem - 1.25rem) / 2);
+                        height: 1.25rem;
+                        width: 1.25rem;
                         border-radius: 50%;
                     }
                 }
