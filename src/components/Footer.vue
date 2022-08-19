@@ -9,6 +9,8 @@ const stack = ref([
     'Sass'
 ]);
 
+const year = ref(new Date().getFullYear());
+
 function copyEmailToClipboard(e) {
     const email = e.currentTarget.dataset.email;
 
@@ -36,14 +38,13 @@ function fallbackCopyEmailToClipboard(email) {
 <template>
     <div class="footer">
         <div class="footer__section">
-            <h4 class="footer__section__title">Gemacht mit</h4>
+            <h4 class="footer__section__title">Stack</h4>
             <ul class="footer__section__list">
                 <li
                     v-for="(item, i) in stack"
                     class="footer__section__list__item">
                         {{ item }}
                 </li>
-                <li class="footer__section__list__item">&#9749;</li>
             </ul>
         </div>
         <div class="footer__section">
@@ -67,6 +68,14 @@ function fallbackCopyEmailToClipboard(email) {
                         </button>
                     </div>
 
+            </div>
+        </div>
+
+        <div class="footer__section">
+            <div class="footer__section__container">
+                <div class="footer__section__container__row">
+                    Made with &#128156; + &#9749; in {{ year }}.
+                </div>
             </div>
         </div>
     </div>
@@ -102,11 +111,14 @@ function fallbackCopyEmailToClipboard(email) {
 
         &:last-of-type {
             margin-bottom: 0;
-            
         }
 
         @include tablet {
             grid-column: span 3;
+
+            &:last-of-type {
+                grid-column: span 6;
+            }
         }
 
         &__title {
