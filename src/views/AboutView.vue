@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from "vue";
 import IconDownload from "../components/icons/IconDownload.vue";
 const stack = [
   'JavaScript',
@@ -10,7 +11,28 @@ const stack = [
   'TailwindCSS',
   'Bootstrap',
   'Vuetify'
-]
+];
+
+const keywords = [
+  'Sport',
+  'Familie',
+  'Meditation',
+  'Studio Ghibli-Filme'
+];
+
+let counter = ref(0);
+let keyword = ref(keywords[0]);
+
+function cycleKeywords() {
+  setTimeout(() => {
+    if (counter.value >= keywords.length) counter.value = 0; 
+    keyword.value = keywords[counter.value]
+    counter.value++;
+    cycleKeywords();
+  }, 15000); // TODO: Decrease ms ~8000 !!!
+}
+
+cycleKeywords();
 </script>
 <template>
   <div class="about">
@@ -62,7 +84,7 @@ const stack = [
 
       <div class="about__body__section">
         <h2 class="about__body__section__title">Dadurch tanke ich Energie</h2>
-        <p class="about__body__section__paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, doloribus.</p>
+        <p class="about__body__section__paragraph">{{ keyword }}</p>
       </div>
 
     </div>
