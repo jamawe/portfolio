@@ -60,6 +60,7 @@
   --surface3: #ffffff;
 
   --text: #252323;
+  --text-grey: #4c4c4c;
 
   --textInverse: #fef9f3;
   --surfaceInverse: #252323;
@@ -79,7 +80,8 @@
   --surface3: #212121;
   /*--surface3: #3D3A3A; */
 
-  --text: hsla(0, 0%, 100%, .87);
+  --text: #fefbf7;
+  --text-grey: #bfbfbf; /* #c3c3c3; */
   
   --textInverse: #252323;
   --surfaceInverse: #fef9f3;
