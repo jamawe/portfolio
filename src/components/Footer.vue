@@ -38,7 +38,7 @@ function fallbackCopyEmailToClipboard(email) {
 <template>
     <div class="footer">
         <div class="footer__section">
-            <h4 class="footer__section__title">Stack</h4>
+            <h4 class="footer__section__title">Stack für diese Seite</h4>
             <ul class="footer__section__list">
                 <li
                     v-for="(item, i) in stack"
@@ -86,11 +86,11 @@ function fallbackCopyEmailToClipboard(email) {
     display: grid;
     gap: 5%;
     // height: min(25vh, 400px);
-    padding-top: 10%;
-    padding-bottom: 10%;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin-top: 10%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 2rem;
     max-width: 50rem;
     margin-left: auto;
     margin-right: auto;
@@ -110,7 +110,7 @@ function fallbackCopyEmailToClipboard(email) {
         margin-bottom: 2rem;
 
         &:last-of-type {
-            margin-bottom: 0;
+            margin-bottom: 1rem;
         }
 
         @include tablet {
@@ -236,6 +236,10 @@ function fallbackCopyEmailToClipboard(email) {
             }
 
         }
+    }
+
+    &__section:last-of-type {
+      font-size: .875rem; // 15px
     }
 }
 </style>
