@@ -26,7 +26,8 @@ let keyword = ref(keywords[0]);
 function cycleKeywords() {
   setTimeout(() => {
     if (counter.value >= keywords.length) counter.value = 0; 
-    keyword.value = keywords[counter.value]
+    keyword.value = keywords[counter.value];
+    // run function that spells out word?
     counter.value++;
     cycleKeywords();
   }, 15000); // TODO: Decrease ms ~8000 !!!
@@ -84,7 +85,7 @@ cycleKeywords();
 
       <div class="about__body__section">
         <h2 class="about__body__section__title">Dadurch tanke ich Energie</h2>
-        <p class="about__body__section__paragraph">{{ keyword }}</p>
+        <p class="about__body__section__paragraph about__body__section__paragraph--special">{{ keyword }}</p>
       </div>
 
     </div>
@@ -165,6 +166,36 @@ cycleKeywords();
           @include tablet {
             max-width: 60ch;
           }
+
+          &--special {
+            font-family: 'Arial Black', Gadget, sans-serif;
+            font-size: 2rem;
+            font-weight: bolder;
+            text-transform: uppercase;
+            letter-spacing: .125ch;
+            text-align: center;
+            line-height: 110%;
+            margin-top: 2rem;
+            min-height: 80px;
+
+            background-image: var(--gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-size: 300%;
+            animation: gradient-text 2000ms infinite alternate;
+
+            @keyframes gradient-text {
+              0% {
+                background-position: left;
+              }
+              100% {
+                background-position: right;
+              }
+            }
+          }
+
+          
         }
 
         &__list {
@@ -182,4 +213,6 @@ cycleKeywords();
 
     }
   }
+
+  
 </style>

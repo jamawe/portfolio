@@ -23,6 +23,16 @@
   /* portfolio project variables */
   --navbar-toggle-size: 3rem;
   --navbar-toggle-button-size: 1.25rem;
+  --gradient: linear-gradient(90deg, hsla(259, 84%, 78%, 1) 0%, hsla(206, 67%, 75%, 1) 100%);
+
+  /* @keyframes gradient-text {
+    0% {
+      background-position: left;
+    }
+    100% {
+      background-position: right;
+    }
+  } */
 }
 
 /* semantic color variables for this project */
