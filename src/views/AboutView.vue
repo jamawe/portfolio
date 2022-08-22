@@ -21,7 +21,7 @@ const image3 = new ScrollMagic.Scene({
 const image4 = new ScrollMagic.Scene({
   triggerHook: .3,
   duration: '100%',
-  offset: 1800,
+  offset: 1700,
   reverse: false
 });
 
@@ -49,33 +49,11 @@ const stack = [
   'Bootstrap',
   'Vuetify'
 ];
-
-const keywords = [
-  'Sport',
-  'Familie',
-  'Meditation',
-  'Studio Ghibli-Filme'
-];
-
-let counter = ref(0);
-let keyword = ref(keywords[0]);
-
-function cycleKeywords() {
-  setTimeout(() => {
-    if (counter.value >= keywords.length) counter.value = 0; 
-    keyword.value = keywords[counter.value];
-    // run function that spells out word?
-    counter.value++;
-    cycleKeywords();
-  }, 15000); // TODO: Decrease ms ~8000 !!!
-}
-
-cycleKeywords();
 </script>
 <template>
   <div class="about">
     <div class="about__header">
-      <h1 class="about__header__title" id="trigger1">Über</h1>
+      <h1 class="about__header__title">Über</h1>
       <!-- Download CV -->
       <a class="about__header__link" href="#">
         Lebenslauf
@@ -84,7 +62,7 @@ cycleKeywords();
     </div>
 
     <div class="about__body">
-      <div class="about__body__section" id="trigger2">
+      <div class="about__body__section">
         <img class="about__body__section__image about__body__section__image--image1" src="../assets/images/asal-lotfi-8ePZbdxnpi0-unsplash.jpg" height="200" width="200" id="image1" />
         <h2 class="about__body__section__title">Das habe ich studiert</h2>
         <p class="about__body__section__paragraph">
@@ -95,7 +73,7 @@ cycleKeywords();
           Für meine Masterarbeit habe ich mich mit der Weiterentwicklung von
           Benutzeroberflächen in Online-Editionen auseinandergesetzt und mich dazu entschlossen:
         </p>
-        <p class="about__body__section__paragraph about__body__section__paragraph-centered" id="trigger3">
+        <p class="about__body__section__paragraph about__body__section__paragraph-centered">
           Das will ich weitermachen.
         </p>
       </div>
@@ -122,14 +100,10 @@ cycleKeywords();
           </li>
         </ul>
       </div>
+    </div>
 
-      <div class="about__body__section">
-        <div class="trigger4"></div>
-        <h2 class="about__body__section__title">Dadurch tanke ich Energie</h2>
-        <p class="about__body__section__paragraph about__body__section__paragraph--special">{{ keyword }}</p>
-        <img class="about__body__section__image about__body__section__image--profile" src="../assets/images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg" height="250" width="250" id="image4" />
-      </div>
-
+    <div class="about__footer">
+      <img class="about__footer__image" src="../assets/images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg" height="250" width="250" id="image4" />
     </div>
   </div>
 </template>
@@ -185,8 +159,6 @@ cycleKeywords();
         display: flex;
         flex-direction: column;
         position: relative;
-        // margin-top: 5rem;
-        // margin-bottom: 5rem;
         padding-bottom: 2rem;
         min-height: 50vh;
 
@@ -216,35 +188,6 @@ cycleKeywords();
 
           @include tablet {
             max-width: 60ch;
-          }
-
-          &--special {
-            font-family: 'Arial Black', Gadget, sans-serif;
-            font-size: 2rem;
-            font-weight: bolder;
-            text-transform: uppercase;
-            letter-spacing: .125ch;
-            text-align: center;
-            line-height: 110%;
-            margin-top: 2rem;
-            padding-right: 0;
-            min-height: 125px;
-
-            background-image: var(--gradient);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            background-size: 300%;
-            animation: gradient-text 2000ms infinite alternate;
-
-            @keyframes gradient-text {
-              0% {
-                background-position: left;
-              }
-              100% {
-                background-position: right;
-              }
-            }
           }
         }
 
@@ -277,24 +220,25 @@ cycleKeywords();
           &--image3 {
             transform: translate(-50%, -30%);
           }
-
-          &--profile {
-            position: static;
-            opacity: 1;
-            height: 250px;
-            width: 250px;
-            margin-left: auto;
-            margin-right: auto;
-            transform: scale(.8);
-            filter: grayscale(100%);
-          }
         }
 
       }
     }
 
     &__footer {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
 
+      &__image {
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        transform: scale(.8);
+        filter: grayscale(100%);
+        transition: all 1000ms ease-out;
+      }
     }
   }
 .visible1 {
