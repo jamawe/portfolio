@@ -12,7 +12,23 @@ import Footer from './components/Footer.vue';
   <Footer />
 </template>
 
-<style scoped>
+<style>
+@font-face {
+  font-family: 'Roboto Black';
+  src: local('Roboto Black'), local('Roboto-Black'),
+  url(./assets/fonts/Roboto-Black.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Regular';
+  src: local('Roboto Regular'), local('Roboto-Regular'),
+  url(./assets/fonts/Roboto-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto Medium';
+  src: local('Roboto Medium'), local('Roboto-Medium'),
+  url(./assets/fonts/Roboto-Medium.ttf) format('truetype');
+}
 .main {
   max-width: 50rem;
   margin-left: auto;
