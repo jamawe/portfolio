@@ -55,15 +55,16 @@ import IconChevronDoubleDown from './icons/IconChevronDoubleDown.vue';
         }
 
         &__link {
-            font-size: 1rem;
+            font-family: 'Roboto Medium';
+            font-size: 1.125rem;
             text-decoration: none;
-            text-transform: uppercase;
+            text-transform: lowercase;
             font-weight: 500;
             letter-spacing: .05rem;
             color: var(--textInverse);
             background-color: var(--surfaceInverse); // todo: accent color
             border-radius: .25rem;
-            padding: .75rem 1.5rem;
+            padding: .625rem 1.5rem;
             cursor: pointer;
             transition: background-color 200ms ease-in-out;
 
