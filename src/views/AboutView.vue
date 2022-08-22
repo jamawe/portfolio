@@ -79,7 +79,7 @@ const stack = [
       </div>
 
       <div class="about__body__section">
-        <img class="about__body__section__image about__body__section__image--image2" src="../assets/images/mukil-menon-I8uA8kG4O1g-unsplash.jpg" height="200" width="200" id="image2" />
+        <img class="about__body__section__image about__body__section__image--image2" src="../assets/images/durian-bullet-1_bLJ4BHkXA-unsplash.jpg" height="200" width="200" id="image2" />
         <h2 class="about__body__section__title">Das habe ich danach gemacht</h2>
         <p class="about__body__section__paragraph about__body__section__paragraph-centered">
           Also habe ich mich durch einen Dschungel an Online-Kursen, Dokumentationen und Selbstzweifeln gekämpft &mdash; und stehe nun hier.
@@ -171,7 +171,6 @@ const stack = [
           line-height: 110%;
           margin-top: 20%;
           margin-bottom: 5%;
-          mix-blend-mode: difference;
         }
 
         &__paragraph {
@@ -185,7 +184,7 @@ const stack = [
           margin-left: auto;
           margin-right: auto;
           mix-blend-mode: difference;
-
+          
           @include tablet {
             max-width: 60ch;
           }
