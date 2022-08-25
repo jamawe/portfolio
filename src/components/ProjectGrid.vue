@@ -15,7 +15,7 @@ function openOverlay() {
         <div class="projects__body">
             <div class="projects__body__item" @click="openOverlay">
                 <div class="projects__body__item__header">
-                    <h3 class="projects__body__item__header__title">Title</h3>
+                    <h3 class="projects__body__item__header__title">Trainer Codes</h3>
                     <h4 class="projects__body__item__header__subtitle">This is a descriptive subtitle. What happens if it is longer?</h4>
                 </div>
                 <div class="projects__body__item__body">
@@ -24,7 +24,7 @@ function openOverlay() {
                             <IconGitHub class="projects__body__item__body__append__link__icon" />
                         </router-link>
 
-                        <router-link class="projects__body__item__body__append__link" to="#">
+                        <router-link class="projects__body__item__body__append__link" :to="{ name: 'trainercodes-v1' }">
                             <IconArrowRight class="projects__body__item__body__append__link__icon" />
                         </router-link>
 
@@ -129,19 +129,20 @@ function openOverlay() {
             &__header {
                 margin-bottom: 2%;
                 &__title {
+                    font-family: 'Roboto Medium', 'Roboto Regular', sans-serif;
                     font-size: 1.5rem;
-                    text-transform: uppercase;
-                    font-weight: 500;
+                    text-transform: lowercase;
+                    // font-weight: 500;
                     letter-spacing: .05rem;
                     line-height: 120%;
                     margin-bottom: 2%;
                 }
 
                 &__subtitle {
-                    font-size: 1.25rem;
+                    font-size: 1.125rem;
                     font-family: Georgia, 'Times New Roman', Times, serif;
                     font-style: italic;
-                    line-height: 120%;
+                    line-height: 150%;
                 }
             }
 
