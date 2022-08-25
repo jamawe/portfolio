@@ -66,15 +66,12 @@ const stack = [
         <img class="about__body__section__image about__body__section__image--image1" src="../assets/images/asal-lotfi-8ePZbdxnpi0-unsplash.jpg" height="200" width="200" id="image1" />
         <h2 class="about__body__section__title">Das habe ich studiert</h2>
         <p class="about__body__section__paragraph">
-          Meinen Abschluss habe ich Editions- und Dokumentwissenschaft,
+          Meinen Abschluss habe ich Editions- und Dokumentwissenschaft gemacht,
           durchstarten möchte ich nun als Frontend-Entwicklerin.
         </p>
         <p class="about__body__section__paragraph">
-          Für meine Masterarbeit habe ich mich mit der Weiterentwicklung von
-          Benutzeroberflächen in Online-Editionen auseinandergesetzt und mich dazu entschlossen:
-        </p>
-        <p class="about__body__section__paragraph about__body__section__paragraph-centered">
-          Das will ich weitermachen.
+          Woher der Richtungswechsel? Für meine Masterarbeit habe ich mich mit der Weiterentwicklung von
+          Benutzeroberflächen in Online-Editionen auseinandergesetzt und mich dazu entschieden: Das will ich weitermachen.
         </p>
       </div>
 
@@ -82,14 +79,20 @@ const stack = [
         <img class="about__body__section__image about__body__section__image--image2" src="../assets/images/durian-bullet-1_bLJ4BHkXA-unsplash.jpg" height="200" width="200" id="image2" />
         <h2 class="about__body__section__title">Das habe ich danach gemacht</h2>
         <p class="about__body__section__paragraph about__body__section__paragraph-centered">
-          Also habe ich mich durch einen Dschungel an Online-Kursen, Dokumentationen und Selbstzweifeln gekämpft &mdash; und stehe nun hier.
+          Mich durchgekämpft &mdash; nicht nur durch einen Dschungel and Online-Kursen (Hi, Udemy! Grüß dich, Youtube!), sondern auch durch eine Meer an Dokumentationen und Coding-Foren (Hello, StackOverflow!), sowie natürlich, zu guter Letzt, über Berge von Selbstzweifeln.
         </p>
       </div>
 
       <div class="about__body__section">
         <img class="about__body__section__image about__body__section__image--image3" src="../assets/images/altumcode-FoTs3ntRoIs-unsplash.jpg" height="200" width="200" id="image3" />
-        <h2 class="about__body__section__title">Das habe ich dadurch gelernt</h2>
-        <p class="about__body__section__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum maxime et aspernatur, molestias reprehenderit consectetur tempore nobis harum, deserunt culpa voluptates placeat ratione explicabo eos quisquam! Tempore ea vel repellendus?</p>
+        <h2 class="about__body__section__title">Das habe ich dadurch gelernt (bis jetzt)</h2>
+        <ul class="about__body__section__list">
+          <li class="about__body__section__list__item">Umgang mit Frustration</li>
+          <li class="about__body__section__list__item">Umgang mit Fehlermeldungen</li>
+          <li class="about__body__section__list__item">Logge oder verzweifel</li>
+          <li class="about__body__section__list__item">Vertrauen darauf, Skills on demand lernen zu können</li>
+          <li class="about__body__section__list__item">Umgang mit dem Gefühl, nochmal von vorne beginnen zu wollen</li>
+        </ul>
       </div>
 
       <div class="about__body__section">
@@ -180,7 +183,7 @@ const stack = [
           color: var(--text-grey);
           width: 100%;
           max-width: 50ch; // 50-70ch
-          padding-right: 5%;
+          // padding-right: 5%;
           margin-left: auto;
           margin-right: auto;
           mix-blend-mode: difference;
@@ -194,8 +197,11 @@ const stack = [
           color: var(--text-grey);
           list-style-type: '—';
           font-size: 1.125rem; // 18px
-          text-indent: 1ch;
           line-height: 180%;
+
+          &__item {
+            padding-left: .5rem;
+          }
         }
 
         &__image {
