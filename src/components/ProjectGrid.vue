@@ -24,7 +24,7 @@ function openOverlay() {
                             <IconGitHub class="projects__body__item__body__append__link__icon" />
                         </router-link>
 
-                        <router-link class="projects__body__item__body__append__link" :to="{ name: 'trainercodes-v1' }">
+                        <router-link class="projects__body__item__body__append__link" :to="{ name: 'project', params: { project: 'trainercodes-v1' } }">
                             <IconArrowRight class="projects__body__item__body__append__link__icon" />
                         </router-link>
 
