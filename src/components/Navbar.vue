@@ -107,9 +107,11 @@ watch(
         width: 100%;
         background-color: transparent;
         transition: all 500ms ease-in-out;
+        
 
         &--scrolled {
-            background-color: var(--surface3);
+            background-color: var(--surfaceNav);
+            backdrop-filter: blur(15px);
         }
 
         // &__brand {

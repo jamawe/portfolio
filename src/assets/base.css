@@ -71,6 +71,8 @@
   --surface2: #fefbf7;
   --surface3: #ffffff;
 
+  --surfaceNav:hsla(0, 0%, 100%, 0.6);
+
   --text: #252323;
   --text-grey: #808080;
   --text-project-title: #fef9f3;
@@ -92,6 +94,8 @@
   /* --surface2: #383535; */
   --surface3: #212121;
   /*--surface3: #3D3A3A; */
+
+  --surfaceNav: hsla(0, 0%, 13%, 0.6);
 
   --text: #fefbf7;
   --text-grey: #bfbfbf; /* #c3c3c3; */
