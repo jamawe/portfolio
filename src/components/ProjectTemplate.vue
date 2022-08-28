@@ -1,7 +1,6 @@
 <script setup>
 import { defineProps } from 'vue';
 const props = defineProps(['project']);
-console.log('%cprops', 'color: darkseagreen; font-weight: bold;', props.project);
 </script>
 
 
