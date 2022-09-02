@@ -166,7 +166,7 @@ const stack = [
         min-height: 50vh;
 
         &__title {
-          font-family: Georgia, 'Times New Roman', Times, serif;
+          font-family: var(--serif);
           font-weight: bold;
           font-size: 1.625rem; // 26px
           text-transform: lowercase;

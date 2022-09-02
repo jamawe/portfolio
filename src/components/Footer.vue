@@ -74,7 +74,7 @@ function fallbackCopyEmailToClipboard(email) {
         <div class="footer__section">
             <div class="footer__section__container">
                 <div class="footer__section__container__row">
-                    Made with &#128156; + &#9749; in {{ year }}.
+                    made with &#128156; + &#9749; in {{ year }}
                 </div>
             </div>
         </div>
@@ -94,7 +94,7 @@ function fallbackCopyEmailToClipboard(email) {
     max-width: 50rem;
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Monaco', monospace;
+    // font-family: var(--monospace);
 
     @include tablet {
         grid-template-columns: repeat(6, 1fr);
@@ -123,7 +123,7 @@ function fallbackCopyEmailToClipboard(email) {
 
         &__title {
             font-weight: bold;
-            font-size: 1.125rem;
+            font-size: 1.175rem;
             letter-spacing: .25ch;
             margin-left: auto;
             margin-right: auto;
@@ -131,6 +131,7 @@ function fallbackCopyEmailToClipboard(email) {
         }
 
         &__list {
+            font-family: var(--monospace);
             list-style-type: none;
             padding-inline-start: 0;
 
@@ -160,6 +161,7 @@ function fallbackCopyEmailToClipboard(email) {
         &__container {
             display: flex;
             flex-direction: column;
+            font-family: var(--monospace);
 
             @include tablet-landscape {
                 flex-direction: row;

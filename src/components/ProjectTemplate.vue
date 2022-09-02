@@ -132,7 +132,7 @@ const url = props.project.project[i].src;
         }
 
         &__subtitle {
-            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-family: var(--serif);
             font-size: 1.75rem;
             font-style: italic;
             line-height: 110%;

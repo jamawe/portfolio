@@ -25,6 +25,9 @@
   --navbar-toggle-button-size: 1.25rem;
   --gradient: linear-gradient(90deg, hsla(259, 84%, 78%, 1) 0%, hsla(206, 67%, 75%, 1) 100%);
 
+  --monospace: 'Monaco', monospace;
+  --serif: Georgia, 'Times New Roman', Times, serif;
+
   
 
   /* @keyframes gradient-text {

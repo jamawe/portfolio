@@ -19,7 +19,7 @@
 
     &__title {
         font-size: 4rem;
-        font-family: 'Monaco', monospace;
+        font-family: var(--monospace);
         // text-align: center;
         margin-bottom: 2rem;
     }

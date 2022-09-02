@@ -48,7 +48,7 @@ import IconChevronDoubleDown from './icons/IconChevronDoubleDown.vue';
 
         &__subtitle {
             /* h2 24px font-size */
-            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-family: var(--serif);
             font-style: italic;
             margin-top: .5rem;
             margin-bottom: 1.5em;

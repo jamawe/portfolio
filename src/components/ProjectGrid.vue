@@ -150,7 +150,7 @@ function openOverlay() {
 
                 &__subtitle {
                     font-size: 1.125rem;
-                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    font-family: var(--serif);
                     font-style: italic;
                     line-height: 150%;
                 }
