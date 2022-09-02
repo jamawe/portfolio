@@ -1,10 +1,34 @@
+const projectList = [
+    {
+        name: 'news-api',
+        title: 'News API Projekt',
+        description: 'Tagesaktuelle Nachrichten aus verschiedenen Themenbereichen',
+        image: {
+            src: '/assets/images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg',
+            alt: 'alt text',
+        },
+        linkGitHub: 'https://github.com/jamawe/vue-news-api-project',
+        linkProject: 'news-api',
+    },
+    {
+        name: 'trainercodes',
+        title: 'Trainer Codes Projekt',
+        description: 'Freunde finden leicht gemacht für Pokémon GO Spieler',
+        image: {
+            src: '/assets/images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg',
+            alt: 'alt text',
+        },
+        linkGitHub: '#',
+        linkProject: 'trainercodes',
+    }
+]
 const projects = [
     {
-        name: 'trainercodes-v1',
+        name: 'news-api',
         project: [
             {
                 name: 'title',
-                content: 'Trainer Codes v1'
+                content: 'News API\nProjekt'
             },
             {
                 name: 'links',
@@ -15,7 +39,7 @@ const projects = [
                     },
                     {
                         text: 'GitHub',
-                        href: '#'
+                        href: 'https://github.com/jamawe/vue-news-api-project'
                     }
                 ]
             },
@@ -89,11 +113,11 @@ const projects = [
         ]
     },
     {
-        name: 'trainercodes-v2',
+        name: 'trainercodes',
         project: [
             {
                 name: 'title',
-                content: 'Trainer Codes v2'
+                content: 'Trainer Codes Projekt'
             },
             {
                 name: 'links',
@@ -126,7 +150,7 @@ const projects = [
             },
             {
                 name: 'list',
-                content: ['Laravel', 'jQuery', 'Bootstrap', 'AWS SDK', 'AWS Beanstalk']
+                content: ['Vue3', 'Vue Router', 'Sass', 'AWS SDK', 'AWS Beanstalk']
             },
             {
                 name: 'heading',
@@ -138,7 +162,7 @@ const projects = [
             },
             {
                 name: 'subheading',
-                content: 'quite a long subtitle for feature one'
+                content: 'Leichtes Kopieren von Trainer Codes'
             },
             {
                 name: 'image',
@@ -147,7 +171,7 @@ const projects = [
             },
             {
                 name: 'paragraph',
-                content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aliquam quibusdam et deserunt! Nam minus reiciendis atque officia facilis nulla omnis quasi, repellendus alias ad recusandae laudantium optio nemo adipisci?'
+                content: 'Dgfjfcjf'
             },
             {
                 name: 'subheading',
@@ -176,7 +200,7 @@ const projects = [
                 content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aliquam quibusdam et deserunt! Nam minus reiciendis atque officia facilis nulla omnis quasi, repellendus alias ad recusandae laudantium optio nemo adipisci?'
             },
         ]
-    }
+    },
 ];
 
-export default projects;
+export { projectList, projects };

@@ -1,6 +1,8 @@
 <script setup>
 import IconArrowRight from "./icons/IconArrowRight.vue";
 import IconGitHub from "./icons/IconGitHub.vue";
+import { projectList } from "../modules/projects.js";
+
 function openOverlay() {
 
 }
@@ -13,18 +15,26 @@ function openOverlay() {
         </div>
 
         <div class="projects__body">
-            <div class="projects__body__item" @click="openOverlay">
+            <div
+                v-for="(project, i) in projectList"
+                :key="i"
+                class="projects__body__item">
+
                 <div class="projects__body__item__header">
-                    <h3 class="projects__body__item__header__title">Trainer Codes</h3>
-                    <h4 class="projects__body__item__header__subtitle">This is a descriptive subtitle. What happens if it is longer?</h4>
+                    <h3 class="projects__body__item__header__title">{{ project.title }}</h3>
+                    <h4 class="projects__body__item__header__subtitle">{{ project.description }}</h4>
                 </div>
                 <div class="projects__body__item__body">
+                    <img
+                        :src="`/src/${project.image.src}`"
+                        :alt="project.image.alt"
+                        class="projects__body__item__body__image">
                     <div class="projects__body__item__body__append">
-                        <router-link class="projects__body__item__body__append__link" to="#">
+                        <a class="projects__body__item__body__append__link" :href="project.linkGitHub">
                             <IconGitHub class="projects__body__item__body__append__link__icon" />
-                        </router-link>
+                        </a>
 
-                        <router-link class="projects__body__item__body__append__link" :to="{ name: 'project', params: { project: 'trainercodes-v1' } }">
+                        <router-link class="projects__body__item__body__append__link" :to="{ name: 'project', params: { project: project.linkProject } }">
                             <IconArrowRight class="projects__body__item__body__append__link__icon" />
                         </router-link>
 
@@ -148,10 +158,15 @@ function openOverlay() {
 
             &__body {
                 position: relative;
-                background-color: lightblue;
-                border-radius: .25rem;
                 width: 100%;
                 flex-grow: 1;
+
+                &__image {
+                    position: absolute;
+                    border-radius: .25rem;
+                    width: 100%;
+                    height: 100%;
+                }
 
                 &__append {
                     position: absolute;
