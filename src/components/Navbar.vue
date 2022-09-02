@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref, toRef, watch } from 'vue';
+import { ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import IconMenu from './icons/IconMenu.vue';
 import IconClose from './icons/IconClose.vue';
