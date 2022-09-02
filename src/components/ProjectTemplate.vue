@@ -1,37 +1,59 @@
 <script setup>
+import HeaderTemplate from './template-sections/HeaderTemplate.vue';
+import LinksTemplate from './template-sections/LinksTemplate.vue';
+import HeadingTemplate from './template-sections/HeadingTemplate.vue';
+import SubheadingTemplate from './template-sections/SubheadingTemplate.vue';
+import ParagraphTemplate from './template-sections/ParagraphTemplate.vue';
+import ImageTemplate from './template-sections/ImageTemplate.vue';
+import ListTemplate from './template-sections/ListTemplate.vue';
+
 const props = defineProps(['project']);
+const project = props.project.project;
+const i = project.findIndex(section => section.name === 'headerImage');
+// NOTE: Add '/src' to path! (Either in projects array or in inline :style)
+const url = props.project.project[i].src;
 </script>
 
-
 <template>
-<div class="project">
-<!-- {{ section }} -->
-    <template v-for="(section, i) in props.project.project" :key="i">
-        <div v-if="section.name === 'title'" class="project__header">
-            <h1  class="project__header__title">{{ section.content }}</h1>
-        </div>
+    <div class="project">
+        <template v-for="(section, i) in props.project.project" :key="i">
+            <HeaderTemplate
+                v-if="section.name === 'title'"
+                :url="url"
+                :title="section.content" />
 
-        <div v-if="section.name === 'links'" class="project__body__section__links">
-            <a v-for="(link, i) in section.links" :key="i" class="project__body__section__links__item" :href="link.href" target="_blank">{{ link.text }}</a>
-        </div>
+            <LinksTemplate
+                v-else-if="section.name === 'links'"
+                :links="section.links" />
 
-        <h2 v-if="section.name === 'heading'" class="project__body__section__title">{{ section.content }}</h2>
+            <HeadingTemplate
+                v-else-if="section.name === 'heading'"
+                :heading="section.content" />
 
-        <h3 v-if="section.name === 'subheading'" class="project__body__section__subtitle">{{ section.content }}</h3>
+            <SubheadingTemplate 
+                v-else-if="section.name === 'subheading'"
+                :subheading="section.content" />
+            
+            <ParagraphTemplate
+                v-else-if="section.name === 'paragraph'"
+                :paragraph="section.content" />
 
-        <p v-if="section.name === 'paragraph'" class="project__body__section__paragraph">{{ section.content }}</p>
+            <ImageTemplate
+                v-else-if="section.name === 'image'"
+                :src="section.src"
+                :alt="section.alt" />
 
-        <img v-if="section.name === 'image'" class="project__body__section__image" :src="`/src/${section.src}`" :alt="section.alt" />
-
-        <ul v-if="section.name === 'list'" class="project__body__section__list">
-            <li v-for="(item, i) in section.content" :key="i" class="project__body__section__list__item">{{ item }}</li>
-        </ul>
-    </template>
-</div>
+            <ListTemplate
+                v-else-if="section.name === 'list'"
+                :list="section.content" />
+                
+        </template>
+    </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .project {
+    align-items: center;
     min-height: 100vh;
     margin-bottom: 5rem;
 
@@ -39,7 +61,7 @@ const props = defineProps(['project']);
         position: relative;
         height: 50vh;
         width: 100%;
-        background-image: url(../assets/images/durian-bullet-1_bLJ4BHkXA-unsplash.jpg);
+        background: var(--surface2);
         background-size: cover;
 
         &::before {
@@ -64,92 +86,87 @@ const props = defineProps(['project']);
         }
     }
 
-    &__body {
-        padding-left: 5%;
-        padding-right: 5%;
+    &__links {
+        display: flex;
+        justify-content: center;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
 
-        &__section {
-            max-width: 50ch; // 50-70ch
-            margin-left: auto;
-            margin-right: auto;
+        &__item {
+            color: var(--textInverse);
+            background-color: var(--surfaceInverse);
+            text-decoration: none;
+            border-radius: .25rem;
+            padding: .25rem 1.25rem;
+            margin-left: .75rem;
+            margin-right: .75rem;
 
-            @include tablet {
-                max-width: 70ch;
-            }
-
-            &__title {
-                font-weight: bold;
-                font-size: clamp(1rem, 10vw + 1rem, 2rem); /* h1 32px */
-                line-height: 110%;
-                text-transform: lowercase;
-                text-align: center;
-                margin-top: 5rem;
-                margin-bottom: 10%;
-            }
-
-            &__subtitle {
-                font-family: Georgia, 'Times New Roman', Times, serif;
-                font-size: 1.75rem;
-                font-style: italic;
-                line-height: 110%;
-                margin-top: .5rem;
-                margin-bottom: 1.5em;
-            }
-
-            &__links {
-                display: flex;
-                justify-content: center;
-                margin-top: 1.5rem;
-                margin-bottom: 1.5rem;
-
-                &__item {
-                    outline-offset: 5px;;
-                    color: var(--textInverse);
-                    background-color: var(--surfaceInverse);
-                    text-decoration: none;
-                    border-radius: .25rem;
-                    padding: .25rem 1.25rem;
-                    margin-left: .75rem;
-                    margin-right: .75rem;
-
-                    &:hover {
-                        background-color: var(--surfaceInverseHover);
-                    }
-                }
-            }
-
-            &__paragraph {
-                font-size: 1.125rem; // 18px 
-                line-height: 190%;
-                color: var(--text-grey);
-                width: 100%;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 3rem;
-                margin-bottom: 3rem;
-            }
-
-            &__image {
-                height: 300px;
-                width: 100%;
-            }
-
-            &__list {
-                font-size: 1.125rem; // 18px 
-                list-style-type: '—';
-                line-height: 190%;
-                // color: var(--text-grey);
-
-                &__item {
-                    padding-left: .5rem;
-                }
+            &:hover {
+                background-color: var(--surfaceInverseHover);
             }
         }
     }
 
-    &__footer {
+    &__body {
+        display: flex;
+        justify-content: center;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 50ch;
 
+        @include tablet {
+            padding-left: 0;
+            padding-right: 0;
+            max-width: 70ch;
+        }
 
+        &__title {
+            font-weight: bold;
+            font-size: clamp(1rem, 10vw + 1rem, 2rem); /* h1 32px */
+            line-height: 110%;
+            text-transform: lowercase;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        &__subtitle {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 1.75rem;
+            font-style: italic;
+            line-height: 110%;
+            text-align: left;
+            margin-top: 3rem;
+            margin-right: auto;
+        }
+
+        &__paragraph {
+            font-size: 1.125rem; // 18px 
+            line-height: 190%;
+            color: var(--text-grey);
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        &__image {
+            flex-grow: 1;
+            height: 300px;
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        &__list {
+            font-size: 1.125rem; // 18px 
+            list-style-type: '—';
+            line-height: 190%;
+            margin-top: 2rem;
+            padding-right: 30%;
+
+            &__item {
+                padding-left: .5rem;
+            }
+        }
     }
 }
 </style>

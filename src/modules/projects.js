@@ -27,6 +27,11 @@ const projects = [
         name: 'news-api',
         project: [
             {
+                name: 'headerImage',
+                src: '/assets/images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg',
+                alt: 'texttext',
+            },
+            {
                 name: 'title',
                 content: 'News API\nProjekt'
             },
@@ -49,7 +54,7 @@ const projects = [
             },
             {
                 name: 'paragraph',
-                content: 'Trainer Codes ist eine Webseite für Pokémon GO Spieler, die es ihnen erleichtert andere Spieler aus der ganzen Welt zu finden und sie als Freunde hinzuzufügen.'
+                content: 'Dieses Projekt beschäftigt sich mit der News API, mit der Nachrichten von unterschiedlichsten Quellen und Sprachen angefragt werden können.'
             },
             {
                 name: 'heading',
