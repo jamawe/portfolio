@@ -23,7 +23,7 @@ if (colorTheme === 'dark') {
 let scrolled = ref(false);
 //Listen to scroll in order to toggle navbar bg-color
 window.addEventListener('scroll', () => {
-    scrolled.value = window.scrollY > 50 ? true : false;
+    scrolled.value = window.scrollY > 0 ? true : false;
 })
 
 function toggleTheme(e) {
