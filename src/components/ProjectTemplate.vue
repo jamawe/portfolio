@@ -59,7 +59,7 @@ const url = props.project.project[i].src;
 
     &__header {
         position: relative;
-        height: 50vh;
+        height: 400px;
         width: 100%;
         background: var(--surface2);
         background-size: cover;
