@@ -89,17 +89,6 @@ watch(
                         <IconGitHub class="navbar__list__item__link__icon" />
                     </a>
                 </li>
-                <!-- <li v-if="!darkTheme" class="navbar__list__item">
-                    <button @click="toggleTheme" class="navbar__list__item__button" type="button" data-theme="dark" title="Zu dunklem Modus wechseln">
-                        <IconMoon class="navbar__list__item__button__icon navbar__list__item__button__icon" />
-                    </button>
-                </li> -->
-                <!-- <li v-if="darkTheme" class="navbar__list__item">
-                    <button @click="toggleTheme" class="navbar__list__item__button" type="button" data-theme="light" title="Zu hellem Modus wechseln">
-                        <IconSun class="navbar__list__item__button__icon navbar__list__item__button__icon" />
-                    </button>
-                </li> -->
-                
             </ul>
 
        
@@ -251,8 +240,6 @@ watch(
                     // }
                 }
 
-                // &__link
-
                 &__button {
                     position: relative;
                     background-color: transparent;
@@ -292,8 +279,6 @@ watch(
                     }
                 }
             }
-
-
         }
    }
 
@@ -304,11 +289,11 @@ watch(
 
     .slide-down-enter-from {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(20px);
     }
 
     .slide-down-leave-to {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(-20px);
     }
 </style>
