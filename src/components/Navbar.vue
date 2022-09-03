@@ -5,6 +5,7 @@ import IconMenu from './icons/IconMenu.vue';
 import IconClose from './icons/IconClose.vue';
 import IconMoon from './icons/IconMoon.vue';
 import IconSun from './icons/IconSun.vue';
+import IconGitHub from './icons/IconGitHub.vue';
 
 let showMenu = ref(false);
 const route = useRoute();
@@ -54,7 +55,14 @@ watch(
 
 <template>
     <nav class="navbar" :class="{'navbar--scrolled': scrolled}">
-        <!-- <div class="navbar__brand">BrandName</div> -->
+        <div class="navbar__brand">
+            <button v-if="!darkTheme" @click="toggleTheme" class="navbar__list__item__button" type="button" data-theme="dark" title="Zu dunklem Modus wechseln">
+                <IconMoon class="navbar__list__item__button__icon navbar__list__item__button__icon" />
+            </button>
+            <button v-else-if="darkTheme" @click="toggleTheme" class="navbar__list__item__button" type="button" data-theme="light" title="Zu hellem Modus wechseln">
+                <IconSun class="navbar__list__item__button__icon navbar__list__item__button__icon" />
+            </button>
+        </div>
          <div class="navbar__toggle">
             <Transition name="slide-down" mode="out-in">
                 <button v-if="!showMenu" @click="showMenu = !showMenu" class="navbar__toggle__button" type="button">
@@ -76,19 +84,22 @@ watch(
                 <li @click="showMenu = !showMenu" class="navbar__list__item">
                     <router-link class="navbar__list__item__link" :to="{ name: 'about' }" title="Über mich">Über</router-link>
                 </li>
-                <li @click="showMenu = !showMenu" class="navbar__list__item">
-                    <router-link class="navbar__list__item__link" :to="{ name: 'contact' }" title="Kontakt">Kontakt</router-link>
+                <li class="navbar__list__item">
+                    <a href="#" class="navbar__list__item__link navbar__list__item__link--no-effect">
+                        <IconGitHub class="navbar__list__item__link__icon" />
+                    </a>
                 </li>
-                <li v-if="!darkTheme" class="navbar__list__item">
+                <!-- <li v-if="!darkTheme" class="navbar__list__item">
                     <button @click="toggleTheme" class="navbar__list__item__button" type="button" data-theme="dark" title="Zu dunklem Modus wechseln">
                         <IconMoon class="navbar__list__item__button__icon navbar__list__item__button__icon" />
                     </button>
-                </li>
-                <li v-if="darkTheme" class="navbar__list__item">
+                </li> -->
+                <!-- <li v-if="darkTheme" class="navbar__list__item">
                     <button @click="toggleTheme" class="navbar__list__item__button" type="button" data-theme="light" title="Zu hellem Modus wechseln">
                         <IconSun class="navbar__list__item__button__icon navbar__list__item__button__icon" />
                     </button>
-                </li>
+                </li> -->
+                
             </ul>
 
        
@@ -97,6 +108,7 @@ watch(
 
 <style lang="scss">
    .navbar {
+        position: relative;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
@@ -114,9 +126,12 @@ watch(
             backdrop-filter: blur(15px);
         }
 
-        // &__brand {
-        //     width: 20%; /* toggle: 80, button: float right */
-        // }
+        &__brand {
+            position: absolute;
+            top: 18px;
+            left: 12.5px;
+            width: 20%; /* toggle: 80, button: float right */
+        }
 
         &__toggle {
             position: relative;
@@ -198,6 +213,11 @@ watch(
                     text-transform: lowercase;
                     letter-spacing: .0625rem;
 
+                    &__icon {
+                        border-radius: 50%;
+                        margin-top: .5rem;
+                    }
+
                     &::after {
                         content: '';
                         position: absolute;
@@ -213,7 +233,25 @@ watch(
                     &:hover::after {
                         transform: scale(1);
                     }
+
+                    &--no-effect::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        height: 0;
+                        background: transparent;
+                        transform: scale(0);
+                        transition: transform 150ms ease-in-out;
+                    }
+
+                    // &--no-effect:hover {
+                        // TODO color
+                    // }
                 }
+
+                // &__link
 
                 &__button {
                     position: relative;
