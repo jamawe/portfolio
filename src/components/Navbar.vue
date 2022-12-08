@@ -56,10 +56,10 @@ watch(
 <template>
     <nav class="navbar" :class="{'navbar--scrolled': scrolled}">
         <div class="navbar__brand">
-            <button v-if="!darkTheme" @click="toggleTheme" class="navbar__list__item__button" type="button" data-theme="dark" title="Zu dunklem Modus wechseln">
+            <button v-if="!darkTheme" @click="toggleTheme($event)" class="navbar__list__item__button" type="button" data-theme="dark" title="Zu dunklem Modus wechseln">
                 <IconMoon class="navbar__list__item__button__icon navbar__list__item__button__icon" />
             </button>
-            <button v-else-if="darkTheme" @click="toggleTheme" class="navbar__list__item__button" type="button" data-theme="light" title="Zu hellem Modus wechseln">
+            <button v-else-if="darkTheme" @click="toggleTheme($event)" class="navbar__list__item__button" type="button" data-theme="light" title="Zu hellem Modus wechseln">
                 <IconSun class="navbar__list__item__button__icon navbar__list__item__button__icon" />
             </button>
         </div>
@@ -248,6 +248,7 @@ watch(
                     height: 1.5rem;
                     width: 1.5rem;
                     cursor: pointer;
+                    z-index: 1;
 
                     &::before {
                         content: '';
