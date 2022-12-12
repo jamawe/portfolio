@@ -101,15 +101,14 @@ watch(
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        position: sticky;
+        position: fixed;
         top: 0;
         z-index: 50;
         padding: .5rem;
         width: 100%;
         background-color: transparent;
-        transition: all 500ms ease-in-out;
+        transition: all 300ms ease-in-out;
         
-
         &--scrolled {
             background-color: var(--surfaceNav);
             backdrop-filter: blur(15px);
