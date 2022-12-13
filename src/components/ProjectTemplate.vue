@@ -69,6 +69,7 @@ const url = props.project.project[i].src;
         width: 100%;
         background: var(--surface2);
         background-size: cover;
+        background-position: center;
 
         &::before {
             content: '';
