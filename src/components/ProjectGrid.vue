@@ -189,14 +189,12 @@ function openOverlay() {
                         border-radius: 50%;
                         background-color: var(--surface1); // TODO: colors
 
-                        
-
                         &__icon {
                             color: var(--text); // TODO: color
                             background-color: var(--surface1);
                             border-radius: 50%;
-                            height: 29px;
-                            width: 29px;
+                            height: 28px;
+                            width: 28px;
                         }
                     }
 
