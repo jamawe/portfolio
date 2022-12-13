@@ -162,9 +162,10 @@ const url = props.project.project[i].src;
 
         &__image {
             flex-grow: 1;
-            height: 300px;
+            max-height: 500px;
             width: 100%;
             margin-top: 2rem;
+            object-fit: contain;
         }
 
         &__list {
