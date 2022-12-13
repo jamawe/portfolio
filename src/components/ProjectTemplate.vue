@@ -6,6 +6,7 @@ import SubheadingTemplate from './template-sections/SubheadingTemplate.vue';
 import ParagraphTemplate from './template-sections/ParagraphTemplate.vue';
 import ImageTemplate from './template-sections/ImageTemplate.vue';
 import ListTemplate from './template-sections/ListTemplate.vue';
+import EmbedTemplate from './template-sections/EmbedTemplate.vue';
 
 const props = defineProps(['project']);
 const project = props.project.project;
@@ -46,6 +47,11 @@ const url = props.project.project[i].src;
             <ListTemplate
                 v-else-if="section.name === 'list'"
                 :list="section.content" />
+
+            <EmbedTemplate
+                v-else-if="section.name === 'embed'"
+                :url="section.url"
+                :title="section.title" />
                 
         </template>
     </div>
@@ -122,6 +128,10 @@ const url = props.project.project[i].src;
             max-width: 70ch;
         }
 
+        &__embed{
+            margin-top: 4rem;
+        }
+
         &__title {
             font-weight: bold;
             font-size: clamp(1rem, 10vw + 1rem, 2rem); /* h1 32px */
@@ -135,7 +145,7 @@ const url = props.project.project[i].src;
             font-family: var(--serif);
             font-size: 1.75rem;
             font-style: italic;
-            line-height: 110%;
+            line-height: 125%;
             text-align: left;
             margin-top: 3rem;
             margin-right: auto;
