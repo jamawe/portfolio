@@ -5,7 +5,7 @@ const projectList = [
         description: 'Tagesaktuelle Nachrichten zu verschiedenen Themen mittels der New York Times Article Search API',
         image: {
             src: '/assets/images/news_grid_dark_nonavbar.jpg',
-            alt: 'alt text',
+            alt: 'Vier Screenshots von Artikeln horzizontal nebeneinander.',
         },
         linkGitHub: 'https://github.com/jamawe/vue-news-api-project',
         linkProject: 'news-api',
@@ -22,15 +22,15 @@ const projectList = [
         linkProject: 'draggable-article',
     },
     {
-        name: 'trainercodes',
+        name: 'trainer-codes',
         title: 'Trainer Codes Projekt',
-        description: 'Freunde finden leicht gemacht für Pokémon GO Spieler',
+        description: 'Freunde finden leicht gemacht für Pokémon GO-Spieler',
         image: {
-            src: '/assets/images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg',
-            alt: 'alt text',
+            src: '/assets/images/tc_grid.jpg',
+            alt: 'Vier Screenshots des Trainer Codes Projekts horizontal nebeneinander.',
         },
-        linkGitHub: '#',
-        linkProject: 'trainercodes',
+        linkGitHub: 'https://github.com/Grischa89/tc_vue_1',
+        linkProject: 'trainer-codes',
     }
 ]
 const projects = [
@@ -40,7 +40,7 @@ const projects = [
             {
                 name: 'headerImage',
                 src: '/assets/images/news_grid_dark_nonavbar.jpg',
-                alt: 'texttext',
+                alt: 'Vier Screenshots von Artikeln horzizontal nebeneinander.',
             },
             {
                 name: 'title',
@@ -245,8 +245,13 @@ const projects = [
         ]
     },
     {
-        name: 'trainercodes',
+        name: 'trainer-codes',
         project: [
+            {
+                name: 'headerImage',
+                src: '/assets/images/tc_grid.jpg',
+                alt: 'Vier Screenshots des Trainer Codes Projekts horizontal nebeneinander.',
+            },
             {
                 name: 'title',
                 content: 'Trainer Codes Projekt'
@@ -254,13 +259,13 @@ const projects = [
             {
                 name: 'links',
                 links: [
-                    {
-                        text: 'Live Demo',
-                        href: '#'
-                    },
+                    // {
+                    //     text: 'Live Demo',
+                    //     href: '#'
+                    // },
                     {
                         text: 'GitHub',
-                        href: '#'
+                        href: 'https://github.com/Grischa89/tc_vue_1'
                     }
                 ]
             },
@@ -270,66 +275,58 @@ const projects = [
             },
             {
                 name: 'paragraph',
-                content: 'Trainer Codes ist eine Webseite für Pokémon GO Spieler, die es ihnen erleichtert andere Spieler aus der ganzen Welt zu finden und sie als Freunde hinzuzufügen.'
+                content: 'Trainer Codes ist ein Projekt für Pokémon GO-Spieler. Es wird ihnen erleichtert, andere Spieler aus der ganzen Welt zu finden und sie als Freunde hinzuzufügen.'
             },
             {
                 name: 'heading',
                 content: 'Stack'
             },
             {
-                name: 'paragraph',
-                content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde aut iure perspiciatis molestiae dolores voluptates quos saepe tempora consectetur omnis.'
-            },
-            {
                 name: 'list',
-                content: ['Vue3', 'Vue Router', 'Sass', 'AWS SDK', 'AWS Beanstalk']
+                content: ['Vue3', 'Vuex', 'Vue Router', 'Axios']
             },
             {
                 name: 'heading',
                 content: 'Features',
             },
             {
-                name: 'paragraph',
-                content: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde aut iure perspiciatis molestiae dolores voluptates quos saepe tempora consectetur omnis.'
-            },
-            {
                 name: 'subheading',
-                content: 'Leichtes Kopieren von Trainer Codes'
+                content: 'Kopieren von Trainer Codes (Smartphone)'
             },
             {
                 name: 'image',
-                src: '/assets/images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg',
-                alt: 'alt text'
+                src: '/assets/images/tc_copy.gif',
+                alt: 'In einer Tabelle, die aus zwei Spalten besteht, wird herunter gescrollt. Von links nach rechts heißen die Spaltenbezeichnungen: Country, Trainercode. In der Country Spalte befindet sich Text, in der Trainercode Spalte befinden sich ein 8-stelliger Code und zwei Icons. Nach Ende des Herunterscrollens wird auf das linke der beiden Icons getippt. Die Hintergrundfarbe des Icons ändert sich und es erscheint ein Tooltip über ihm, das darauf hinweist, dass der Code kopiert wurde.'
             },
             {
                 name: 'paragraph',
-                content: 'Dgfjfcjf'
+                content: 'Pokémon GO ist ein Spiel, in dem man davon profitiert, sich mit anderen Spielern aus der ganzen Welt zu verbinden. Um diesen eine Anfrage zu stellen, muss im Spiel selbst der Freundes-Code eingegeben werden. Trainer Codes bietet eine erleichterte Bedienung für Spieler, da es einfaches Kopieren per Tap ermöglicht. So kann Trainer Codes, wie Pokémon GO selbst, auf dem Smartphone geöffnet werden und einfach zwischen den Apps gewechselt oder sie sogar im Split-Screen aufgerufen werden.'
             },
             {
                 name: 'subheading',
-                content: 'some feature 2'
+                content: 'Kopieren von Trainer Codes (Desktop)'
             },
             {
                 name: 'image',
-                src: '/assets/images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg',
-                alt: 'alt text 3'
+                src: '/assets/images/tc_qr.jpg',
+                alt: 'Ein QR-Code, schwarz auf weißem Hintergrund, befindet sich zentriert auf einem dunkelgrauen Modal. Über dem QR-Code steht \'Uruguay\' als Überschrift, unterhalb des Codes ein 8-stelliger Zahlencode und ein Icon, dass darauf hindeutet, dass der obige Code kopiert werden kann. In der oberen rechten Ecke des Modals kann dieses über ein X-Icon geschlossen werden. Im Hintergrund des Modals ist verblasst die Seite zu sehen, auf der das Modal geöffnet wurde.'
             },
             {
                 name: 'paragraph',
-                content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aliquam quibusdam et deserunt! Nam minus reiciendis atque officia facilis nulla omnis quasi, repellendus alias ad recusandae laudantium optio nemo adipisci?'
+                content: 'Pokémon GO bietet es an, eine Freundschaftanfrage auch über Scannen eines QR-Codes zu stellen. Deswegen bietet Trainer Codes neben dem Kopieren per Tap auch das Anzeigen des jeweiligen Codes als QR-Code an. So kann die Seite auf dem Desktop geöffnet und mit dem Smartphone der Code gescannt werden.'
             },
             {
                 name: 'subheading',
-                content: 'some other feature 1'
+                content: 'Vielseitige Navigation'
             },
             {
                 name: 'image',
-                src: '/assets/images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg',
-                alt: 'alt text'
+                src: '/assets/images/tc_nav.gif',
+                alt: 'In einer horizontalen Navigation wird zunächst nach rechts gescrollt, dann zurück nach links zum Anfang. Gescrollt wird duch eine Reihe an abgerundeten Buttons, braun mit hellbrauner Border und weißer Schrift, die jeweils französische Städte als Text haben. Über diesem Navigations-Element befindet sich die Überschrift \'Explore More Cities\', unter der Navigation eine Verlinkung, \'Show all Codes from France\', mit einem Pfeil als Icon, der nach rechts zeigt.'
             },
             {
                 name: 'paragraph',
-                content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore aliquam quibusdam et deserunt! Nam minus reiciendis atque officia facilis nulla omnis quasi, repellendus alias ad recusandae laudantium optio nemo adipisci?'
+                content: 'Kontinente können über ein Dropdown-Menu in der Navbar erreicht werden, Länder über Links in den Tabellen eines Kontinents. Die Navigation zu Städten befindet sich zum einen auf der Seite eines Landes, zum anderen wird sie auf der Stadt-Seite selbst zugänglich gemacht. In beiden fällen handelt es sich um eine Navigation mit horizontalem Scroll.'
             },
         ]
     },
