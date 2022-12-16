@@ -106,7 +106,7 @@ const stack = [
     </div>
 
     <div class="about__footer">
-      <img class="about__footer__image" src="../assets/images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg" height="250" width="250" id="image4" />
+      <img class="about__footer__image" src="../assets/images/jamawe.jpg" height="250" width="250" id="image4" />
     </div>
   </div>
 </template>
@@ -123,6 +123,7 @@ const stack = [
       align-items: center;
       padding-left: 2.5%;
       padding-right: 2.5%;
+      margin-top: 4rem;
       margin-bottom: 2rem;
 
       &__title {
@@ -172,7 +173,7 @@ const stack = [
           text-transform: lowercase;
           font-style: italic;
           line-height: 110%;
-          margin-top: 20%;
+          margin-top: min(20%, 100px);
           margin-bottom: 5%;
         }
 
