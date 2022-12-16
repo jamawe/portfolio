@@ -63,7 +63,7 @@ const stack = [
 
     <div class="about__body">
       <div class="about__body__section">
-        <img class="about__body__section__image about__body__section__image--image1" src="../assets/images/asal-lotfi-8ePZbdxnpi0-unsplash.jpg" height="200" width="200" id="image1" />
+        <img class="about__body__section__image about__body__section__image--image1" src="https://portfolio-jamawe.s3.us-east-2.amazonaws.com/asal-lotfi-8ePZbdxnpi0-unsplash.jpg" height="200" width="200" id="image1" />
         <h2 class="about__body__section__title">Das habe ich studiert</h2>
         <p class="about__body__section__paragraph">
           Meinen Abschluss habe ich Editions- und Dokumentwissenschaft gemacht,
@@ -76,7 +76,7 @@ const stack = [
       </div>
 
       <div class="about__body__section">
-        <img class="about__body__section__image about__body__section__image--image2" src="../assets/images/durian-bullet-1_bLJ4BHkXA-unsplash.jpg" height="200" width="200" id="image2" />
+        <img class="about__body__section__image about__body__section__image--image2" src="https://portfolio-jamawe.s3.us-east-2.amazonaws.com/durian-bullet-1_bLJ4BHkXA-unsplash.jpg" height="200" width="200" id="image2" />
         <h2 class="about__body__section__title">Das habe ich danach gemacht</h2>
         <p class="about__body__section__paragraph about__body__section__paragraph-centered">
           Mich durchgekämpft &mdash; nicht nur durch einen Dschungel and Online-Kursen (Hi, Udemy! Grüß dich, Youtube!), sondern auch durch eine Meer an Dokumentationen und Coding-Foren (Hello, StackOverflow!), sowie natürlich, zu guter Letzt, über Berge von Selbstzweifeln.
@@ -84,7 +84,7 @@ const stack = [
       </div>
 
       <div class="about__body__section">
-        <img class="about__body__section__image about__body__section__image--image3" src="../assets/images/altumcode-FoTs3ntRoIs-unsplash.jpg" height="200" width="200" id="image3" />
+        <img class="about__body__section__image about__body__section__image--image3" src="https://portfolio-jamawe.s3.us-east-2.amazonaws.com/altumcode-FoTs3ntRoIs-unsplash.jpg" height="200" width="200" id="image3" />
         <h2 class="about__body__section__title">Das habe ich dadurch gelernt (bis jetzt)</h2>
         <ul class="about__body__section__list">
           <li class="about__body__section__list__item">Umgang mit Frustration</li>
@@ -106,7 +106,7 @@ const stack = [
     </div>
 
     <div class="about__footer">
-      <img class="about__footer__image" src="../assets/images/jamawe.jpg" height="250" width="250" id="image4" />
+      <img class="about__footer__image" src="https://portfolio-jamawe.s3.us-east-2.amazonaws.com/jamawe.jpg" height="250" width="250" id="image4" />
     </div>
   </div>
 </template>
