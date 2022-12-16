@@ -4,6 +4,6 @@ const { src, alt } = defineProps(['src', 'alt']);
 
 <template>
     <div class="project__body">
-        <img class="project__body__image" :src="`/src/${src}`" :alt="alt" />
+        <img class="project__body__image" :src="src" :alt="alt" />
     </div>
 </template>

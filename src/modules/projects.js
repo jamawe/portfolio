@@ -4,7 +4,7 @@ const projectList = [
         title: 'News API Projekt',
         description: 'Tagesaktuelle Nachrichten zu verschiedenen Themen mittels der New York Times Article Search API',
         image: {
-            src: '/assets/images/news_grid_dark_nonavbar.jpg',
+            src: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/news_grid_dark_nonavbar.jpg',
             alt: 'Vier Screenshots von Artikeln horzizontal nebeneinander.',
         },
         linkGitHub: 'https://github.com/jamawe/vue-news-api-project',
@@ -15,7 +15,7 @@ const projectList = [
         title: 'Draggable Article Projekt',
         description: 'Artikelerstellung mit Möglichkeit der direkten Neusortierung von Abschnitten',
         image: {
-            src: '/assets/images/draggable_zoom.png',
+            src: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/draggable_zoom.png',
             alt: 'Ein Screenshot des Projekts. Auf der linken Seite sieht man eine Form zur Artikelerstellung. Sie besteht aus vershiedenen Blöcken, von denen alle bis auf einen zusammengeklappt sind. Bei dem geöffneten Block handelt es sich um einen Paragraph-Abschnitt. Auf der rechten Seite sieht man eine Vorschau des Artikels.',
         },
         linkGitHub: 'https://github.com/jamawe/draggable-article',
@@ -26,7 +26,7 @@ const projectList = [
         title: 'Trainer Codes Projekt',
         description: 'Freunde finden leicht gemacht für Pokémon GO-Spieler',
         image: {
-            src: '/assets/images/tc_grid.jpg',
+            src: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/tc_grid.jpg',
             alt: 'Vier Screenshots des Trainer Codes Projekts horizontal nebeneinander.',
         },
         linkGitHub: 'https://github.com/Grischa89/tc_vue_1',
@@ -39,7 +39,7 @@ const projects = [
         project: [
             {
                 name: 'headerImage',
-                src: '/assets/images/news_grid_dark_nonavbar.jpg',
+                src: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/news_grid_dark_nonavbar.jpg',
                 alt: 'Vier Screenshots von Artikeln horzizontal nebeneinander.',
             },
             {
@@ -85,7 +85,7 @@ const projects = [
             },
             {
                 name: 'image',
-                src: '/assets/images/news_infinite_loading_dark.gif',
+                src: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/news_infinite_loading_dark.gif',
                 alt: 'Am oberen Bildrand informiert ein Text darüber, dass mit der letzten API-Anfrage die maximale Anzahl an Anfragen überschritten wurde. Direkt darunter zählt ein Countdown von 10 bis 0 und ein blinkender Lade-Skeleton, der einen Artikel darstellen soll, indiziert, dass gleich ein neuer Artikel geladen wird. Nachdem der Countdown abgelaufen ist, informiert der Text darüber, dass nun die Anfrage erneut versucht wird. Diese ist erfolgreich. Der Skeleton verschwindet, neue Artikel werden geladen und Scrollen ist wieder möglich.'
             },
             {
@@ -98,7 +98,7 @@ const projects = [
             },
             {
                 name: 'image',
-                src: '/assets/images/news_skeletons.jpg',
+                src: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/news_skeletons.jpg',
                 alt: 'Zwei Lade-Skeletons im dunklen Modus nebeneinander. Auf der linken Seite wird ein einzelner Artikel geladen bestehend aus Titelbild, Überschrift, Textblöcken und Buttons. Auf der rechten Seite werden Artikel in Kurzform innerhalb eines horizontalen Sliders geladen, darunter wiederum Buttons.'
             },
             {
@@ -111,7 +111,7 @@ const projects = [
             },
             {
                 name: 'image',
-                src: '/assets/images/news_search.png',
+                src: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/news_search.png',
                 alt: 'Ein Screenshot, welcher ein geöffnetes Such-Modal zeigt. Im oberen Teil des Modals befindet sich ein Feld, in das ein Suchbegriff eingetragen werden kann. In der Mitte kann die Suche nach einer Auswahl an Redaktionen gefiltert werden. In unteren Bereich befindet sich ein Button, der die Suchanfrage startet. Im Hintergrund des Modals sieht man deaktiviert die Vorschau eines anderen Artikels.'
             },
             {
@@ -120,7 +120,7 @@ const projects = [
             },
             {
                 name: 'image',
-                src: '/assets/images/news_search_results_zoom.gif',
+                src: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/news_search_results_zoom.gif',
                 alt: 'Im oberen Bereich befindet sich ein Dropdown-Element, welches durch einen Klick ausgeklappt wird. Es öffnet sich eine Suchform. Im oberen Teil der Form sich ein Feld, in dem bereits ein Suchbegriff eingetragen wurde. In der Mitte kann die Suche nach einer Auswahl an Redaktionen gefiltert werden. Zwei Redaktionen sind bereits ausgewählt. In unteren Bereich befindet sich ein Button, der die Suchanfrage startet. Unterhalb des Dropdown-Elements befindet sich ein geladener Artikel, der eines der Suchergebnisse der obigen Suche darstellt.'
             },
             {
@@ -134,7 +134,7 @@ const projects = [
         project: [
             {
                 name: 'headerImage',
-                src: '/assets/images/draggable_zoom.png',
+                src: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/draggable_zoom.png',
                 alt: 'Ein Screenshot des Projekts. Auf der linken Seite sieht man eine Form zur Artikelerstellung. Sie besteht aus vershiedenen Blöcken, von denen alle bis auf einen zusammengeklappt sind. Bei dem geöffneten Block handelt es sich um einen Paragraph-Abschnitt. Auf der rechten Seite sieht man eine Vorschau des Artikels.',
             },
             {
@@ -185,7 +185,7 @@ const projects = [
             },
             {
                 name: 'image',
-                src: '/assets/images/draggable_adding.gif',
+                src: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/draggable_adding.gif',
                 alt: 'Auf der linken Seite sieht man eine Form zur Artikelerstellung. Auf der rechten Seite sieht man eine Vorschau des Artikels. Die Form besteht zunächst aus drei zusammengeklappten Blöcken. Der User fügt zwei neue Abschnitte hinzu und befüllt diese mit Inhalt: erst eine Liste, dann eine Tabelle. In der Vorschau werden diese Veränderungen am Artikel widergespiegelt.'
             },
             {
@@ -202,7 +202,7 @@ const projects = [
             },
             {
                 name: 'image',
-                src: '/assets/images/draggable_dragging.gif',
+                src: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/draggable_dragging.gif',
                 alt: 'Auf der linken Seite sieht man eine Form zur Artikelerstellung. Auf der rechten Seite sieht man eine Vorschau des Artikels. Die Form besteht zunächst aus sechs zusammengeklappten Blöcken. Durch Ziehen des Elements, wird der Abschnitt vom Typ Tabelle von seiner letzten Position nach weiter oben auf die vierte Position gezogen. Danach wird die Liste von Stelle fünf auf Stelle sechs gezogen. Alle Veränderungen am Artikel werden in der Vorschau widergespiegelt.'
             },
             {
@@ -223,7 +223,7 @@ const projects = [
             },
             {
                 name: 'image',
-                src: '/assets/images/draggable_collapsed.png',
+                src: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/draggable_collapsed.png',
                 alt: 'Auf der linken Seite sieht man eine Form zur Artikelerstellung. Auf der rechten Seite sieht man eine Vorschau des Artikels. Die Form besteht aus vier Abschnitten, von denen drei zusammengeklappt sind. Der dritte Abschnitt, ein Bild, ist geöffnet. Das Bild wurde zum Titelbild erklärt und erschein in der Vorschau an erster Stelle anstatt an seiner eigentlichen Position drei.'
             },
             {
@@ -249,7 +249,7 @@ const projects = [
         project: [
             {
                 name: 'headerImage',
-                src: '/assets/images/tc_grid.jpg',
+                src: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/tc_grid.jpg',
                 alt: 'Vier Screenshots des Trainer Codes Projekts horizontal nebeneinander.',
             },
             {
@@ -295,7 +295,7 @@ const projects = [
             },
             {
                 name: 'image',
-                src: '/assets/images/tc_copy.gif',
+                src: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/tc_copy.gif',
                 alt: 'In einer Tabelle, die aus zwei Spalten besteht, wird herunter gescrollt. Von links nach rechts heißen die Spaltenbezeichnungen: Country, Trainercode. In der Country Spalte befindet sich Text, in der Trainercode Spalte befinden sich ein 8-stelliger Code und zwei Icons. Nach Ende des Herunterscrollens wird auf das linke der beiden Icons getippt. Die Hintergrundfarbe des Icons ändert sich und es erscheint ein Tooltip über ihm, das darauf hinweist, dass der Code kopiert wurde.'
             },
             {
@@ -308,7 +308,7 @@ const projects = [
             },
             {
                 name: 'image',
-                src: '/assets/images/tc_qr.jpg',
+                src: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/tc_qr.jpg',
                 alt: 'Ein QR-Code, schwarz auf weißem Hintergrund, befindet sich zentriert auf einem dunkelgrauen Modal. Über dem QR-Code steht \'Uruguay\' als Überschrift, unterhalb des Codes ein 8-stelliger Zahlencode und ein Icon, dass darauf hindeutet, dass der obige Code kopiert werden kann. In der oberen rechten Ecke des Modals kann dieses über ein X-Icon geschlossen werden. Im Hintergrund des Modals ist verblasst die Seite zu sehen, auf der das Modal geöffnet wurde.'
             },
             {
@@ -321,7 +321,7 @@ const projects = [
             },
             {
                 name: 'image',
-                src: '/assets/images/tc_nav.gif',
+                src: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/tc_nav.gif',
                 alt: 'In einer horizontalen Navigation wird zunächst nach rechts gescrollt, dann zurück nach links zum Anfang. Gescrollt wird duch eine Reihe an abgerundeten Buttons, braun mit hellbrauner Border und weißer Schrift, die jeweils französische Städte als Text haben. Über diesem Navigations-Element befindet sich die Überschrift \'Explore More Cities\', unter der Navigation eine Verlinkung, \'Show all Codes from France\', mit einem Pfeil als Icon, der nach rechts zeigt.'
             },
             {

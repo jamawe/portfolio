@@ -26,7 +26,7 @@ function openOverlay() {
                 </div>
                 <div class="projects__body__item__body">
                     <img
-                        :src="`/src/${project.image.src}`"
+                        :src="project.image.src"
                         :alt="project.image.alt"
                         class="projects__body__item__body__image">
                     <div class="projects__body__item__body__append">
