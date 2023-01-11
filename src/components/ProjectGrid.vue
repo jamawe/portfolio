@@ -25,10 +25,14 @@ function openOverlay() {
                     <h4 class="projects__body__item__header__subtitle">{{ project.description }}</h4>
                 </div>
                 <div class="projects__body__item__body">
-                    <img
-                        :src="project.image.src"
-                        :alt="project.image.alt"
-                        class="projects__body__item__body__image">
+                    <router-link
+                        class="projects__body__item__body__image"
+                        :to="{ name: 'project', params: { project: project.linkProject } }">
+                        <img
+                            :src="project.image.src"
+                            :alt="project.image.alt"
+                            class="projects__body__item__body__image">
+                    </router-link>
                     <div class="projects__body__item__body__append">
                         <a class="projects__body__item__body__append__link" :href="project.linkGitHub">
                             <IconGitHub class="projects__body__item__body__append__link__icon" />
