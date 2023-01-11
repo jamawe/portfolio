@@ -186,31 +186,8 @@ import { projectList } from "../modules/projects.js";
                         }
                     }
 
-                    
                 }
-
-                // &__overlay {
-                //     position: absolute;
-                //     top: 0;
-                //     bottom: 0;
-                //     left: 0;
-                //     right: 0;
-                //     height: 100%;
-                //     width: 100%;
-                //     border-radius: .25rem;
-                //     background-color: rgba(black, .2);
-                //     opacity: 0;
-
-                //     &:hover {
-                //         opacity: 1;
-                //         cursor: pointer;
-                //     }
-
-
-                // }
             }
-
-            
         }
 
     }
