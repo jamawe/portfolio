@@ -49,7 +49,7 @@ import { projectList } from "../modules/projects.js";
 
 <style lang="scss" scoped>
 .projects {
-    padding: 5%;
+    padding: 15% 5% 5% 5%;
 
     &__header {
 

@@ -8,8 +8,9 @@ import IconChevronDoubleDown from './icons/IconChevronDoubleDown.vue';
 
         <div class="hero__body">
             <h1 class="hero__body__title">
-                some text,<br>
-                some longer text
+                hi,<br>
+                ich bin<br>
+                jana wernick
             </h1>
             <h2 class="hero__body__subtitle">
                 &mdash; a description of something
@@ -29,14 +30,19 @@ import IconChevronDoubleDown from './icons/IconChevronDoubleDown.vue';
 <style scoped lang="scss">
 .hero {
     position: relative;
-    height: calc(100vh - 64px); /* TODO: Get height of navbar component in App.vue and pass it to routerview as prop */
+    height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
 
+    @include tablet {
+        height: 100vh;
+    }
+
     &__body {
         padding-left: 5%;
         padding-right: 5%;
+        margin-top: 20vh;
         margin-bottom: 25vh;
 
         &__title {
@@ -76,10 +82,10 @@ import IconChevronDoubleDown from './icons/IconChevronDoubleDown.vue';
 
     &__footer {
         position: absolute;
-        bottom: 12.5%;
+        bottom: 3%;
 
         @include tablet {
-            bottom: 5%;
+            bottom: 2%;
         }
 
         &__link {
