@@ -2,10 +2,6 @@
 import IconArrowRight from "./icons/IconArrowRight.vue";
 import IconGitHub from "./icons/IconGitHub.vue";
 import { projectList } from "../modules/projects.js";
-
-function openOverlay() {
-
-}
 </script>
 
 <template>
@@ -43,39 +39,6 @@ function openOverlay() {
                         </router-link>
 
                     </div>
-                    <!-- <div class="projects__body__item__body__overlay">
-                        item 1
-                    </div> -->
-                </div>
-            </div>
-
-            <div class="projects__body__item" @click="openOverlay">
-                <div class="projects__body__item__header">
-                    <h3 class="projects__body__item__header__title">Title - What happens if this is a longer title?</h3>
-                    <h4 class="projects__body__item__header__subtitle">This is a descriptive subtitle</h4>
-                </div>
-                <div class="projects__body__item__body">
-                    <div class="projects__body__item__body__append">
-
-                    </div>
-                    <!-- <div class="projects__body__item__body__overlay">
-                        item 2
-                    </div> -->
-                </div>
-            </div>
-            
-            <div class="projects__body__item" @click="openOverlay">
-                <div class="projects__body__item__header">
-                    <h3 class="projects__body__item__header__title">Title</h3>
-                    <h4 class="projects__body__item__header__subtitle">This is a descriptive subtitle</h4>
-                </div>
-                <div class="projects__body__item__body">
-                    <div class="projects__body__item__body__append">
-
-                    </div>
-                    <!-- <div class="projects__body__item__body__overlay">
-                        item 3
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -171,6 +134,26 @@ function openOverlay() {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
+                    cursor: pointer;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: hsla(0, 0%, 28%, .2);
+                        border-radius: .25rem;
+
+                        transition: opacity 150ms ease-in-out;
+                    }
+
+                    &:hover {
+                        &::after {
+                            opacity: 0;
+                        }
+                    }
                 }
 
                 &__append {
