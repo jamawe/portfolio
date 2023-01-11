@@ -124,8 +124,8 @@ const url = props.project.project[i].src;
         max-width: 50ch;
 
         @include tablet {
-            padding-left: 0;
-            padding-right: 0;
+            // padding-left: 0;
+            // padding-right: 0;
             max-width: 70ch;
         }
 
