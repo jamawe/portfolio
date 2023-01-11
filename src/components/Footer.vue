@@ -6,7 +6,8 @@ import IconCopy from './icons/IconCopy.vue';
 const stack = ref([
     'Vue3 & Vite',
     'Vue Router',
-    'Sass'
+    'Sass',
+    'ScrollMagic'
 ]);
 
 const year = ref(new Date().getFullYear());
@@ -86,7 +87,7 @@ function fallbackCopyEmailToClipboard(email) {
     display: grid;
     gap: 5%;
     // height: min(25vh, 400px);
-    padding-top: 2rem;
+    padding-top: 6rem;
     padding-bottom: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
