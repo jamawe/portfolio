@@ -87,7 +87,7 @@ import { projectList } from "../modules/projects.js";
             flex-direction: column;
 
             width: 90%;
-            height: min(40vh, 400px); // default, largest // TODO: responsiveness
+            height: min(50vh, 600px); // default, largest // TODO: responsiveness
             margin-bottom: 20%;
 
             &:nth-of-type(2n) {
@@ -105,6 +105,7 @@ import { projectList } from "../modules/projects.js";
 
             &__header {
                 margin-bottom: 2%;
+                
                 &__title {
                     font-family: 'Roboto Medium', 'Roboto Regular', sans-serif;
                     font-size: 1.5rem;
@@ -112,7 +113,7 @@ import { projectList } from "../modules/projects.js";
                     // font-weight: 500;
                     letter-spacing: .05rem;
                     line-height: 120%;
-                    margin-bottom: 2%;
+                    padding-bottom: 5%;
                 }
 
                 &__subtitle {
@@ -120,6 +121,7 @@ import { projectList } from "../modules/projects.js";
                     font-family: var(--serif);
                     font-style: italic;
                     line-height: 150%;
+                    padding-bottom: 2%;
                 }
             }
 
