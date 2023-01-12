@@ -5,23 +5,26 @@ let controller = new ScrollMagic.Controller();
 const image1 = new ScrollMagic.Scene({
   triggerHook: .3,
   duration: '100%',
-  offset: 50
+  offset: 50,
+  // reverse: false
 });
 
 const image2 = new ScrollMagic.Scene({
   duration: '100%',
-  offset: 300
+  offset: 300,
+  // reverse: false
 });
 
 const image3 = new ScrollMagic.Scene({
   duration: '100%',
-  offset: 750
+  offset: 750,
+  // reverse: false
 });
 
 const image4 = new ScrollMagic.Scene({
   triggerHook: .3,
   duration: '100%',
-  offset: 1700,
+  offset: 1500,
   reverse: false
 });
 
@@ -54,11 +57,6 @@ const stack = [
   <div class="about">
     <div class="about__header">
       <h1 class="about__header__title">Über</h1>
-      <!-- Download CV -->
-      <a class="about__header__link" href="#">
-        Lebenslauf
-        <IconDownload class="about__header__link__icon" />
-      </a>
     </div>
 
     <div class="about__body">
@@ -116,6 +114,7 @@ const stack = [
     min-height: 100vh;
     padding: 5%;
     overflow: hidden;
+          // overflow: visible;
 
     &__header {
       display: flex;
@@ -196,78 +195,110 @@ const stack = [
 
         &__list {
           color: var(--text-grey);
-          list-style-type: '—';
+          list-style-type: '— ';
+          list-style-position: inside;
           font-size: 1.125rem; // 18px
           line-height: 180%;
-
-          &__item {
-            padding-left: .5rem;
-          }
         }
 
         &__image {
           opacity: 0;
           position: absolute;
           border-radius: 50%;
-          height: 200px;
-          width: 200px;
+          height: 250px;
+          width: 250px;
           filter: grayscale(0%);
-          transition: all 2500ms ease-out;
+          transition: all 2000ms cubic-bezier(.11,.56,.65,.72);
 
           &--image1 {
-            transform: translate(-50%, -30%);
+            transform: translate(80%, 0%);
           }
 
           &--image2 {
-            transform: translate(120%, -30%);
-
+            transform: translate(-50%, -30%);
           }
 
           &--image3 {
-            transform: translate(-50%, -30%);
+            transform: translate(80%, -30%);
+          }
+
+          @include tablet {
+            &--image1 {
+              transform: translate(170%, 0%);
+            }
+
+            &--image2 {
+              transform: translate(0%, -30%);
+            }
+
+            &--image3 {
+              transform: translate(170%, -30%);
+            }
           }
         }
-
       }
     }
 
     &__footer {
       display: flex;
       justify-content: center;
-      margin-top: 2rem;
+      margin-top: 4rem;
       margin-bottom: 2rem;
 
       &__image {
         height: 250px;
         width: 250px;
         border-radius: 50%;
-        transform: scale(.8);
+        transform: scale(.75);
         filter: grayscale(100%);
-        transition: all 1000ms ease-out;
+        transition: all 1000ms cubic-bezier(.11,.56,.65,.72);
       }
     }
   }
 .visible1 {
   opacity: 1;
-  transform: translate(120%, 120%);
-  filter: grayscale(100%);
+  transform: translate(-50%, 120%);
+  // filter: grayscale(100%);
 }
 
 .visible2 {
   opacity: 1;
-  transform: translate(-50%, 120%);
-  filter: grayscale(100%);
+  transform: translate(80%, 120%);
+  // filter: grayscale(100%);
 }
 
 .visible3 {
   opacity: 1;
-  transform: translate(120%, 120%);
-  filter: grayscale(100%);
+  transform: translate(-50%, 120%);
+  // filter: grayscale(100%);
 }
 
 .visible4 {
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1.2);
   filter: grayscale(0%);
+}
+
+@include tablet {
+  .visible1 {
+    opacity: 1;
+    transform: translate(0%, 120%);
+  }
+
+  .visible2 {
+    opacity: 1;
+    transform: translate(170%, 120%);
+  }
+
+  .visible3 {
+    opacity: 1;
+    transform: translate(0%, 120%);
+  }
+
+  .visible4 {
+    opacity: 1;
+    transform: scale(1.4);
+    filter: grayscale(0%);
+  }
 }
 </style>

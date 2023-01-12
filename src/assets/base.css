@@ -77,7 +77,7 @@
   --surfaceNav:hsla(0, 0%, 100%, 0.6);
 
   --text: #252323;
-  --text-grey: #707070;
+  --text-grey: #7d7d7d;
   --text-project-title: #fef9f3;
 
   --textInverse: #fef9f3;
@@ -101,7 +101,7 @@
   --surfaceNav: hsla(0, 0%, 13%, 0.6);
 
   --text: #fefbf7;
-  --text-grey: #bfbfbf; /* #c3c3c3; */
+  --text-grey: #9f9f9f; /* #c3c3c3; */
   --text-project-title: #fef9f3;
   
   --textInverse: #252323;
