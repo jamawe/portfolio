@@ -4,7 +4,6 @@ import IconChevronDoubleDown from './icons/IconChevronDoubleDown.vue';
 
 <template>
     <div class="hero">
-        <!-- <div class="hero__header"></div> -->
 
         <div class="hero__body">
             <h1 class="hero__body__title">
@@ -13,10 +12,11 @@ import IconChevronDoubleDown from './icons/IconChevronDoubleDown.vue';
                 jana wernick
             </h1>
             <h2 class="hero__body__subtitle">
-                &mdash; a description of something
+                &mdash; frontend developerin
             </h2>
-                <router-link class="hero__body__link" :to="{ name: 'about' }">
-                Über mich</router-link>
+            <router-link class="hero__body__link" :to="{ name: 'about' }">
+                Über mich
+            </router-link>
         </div>
 
         <div class="hero__footer">
@@ -49,6 +49,7 @@ import IconChevronDoubleDown from './icons/IconChevronDoubleDown.vue';
             // font-family: Arial, Helvetica, sans-serif;
             font-weight: bold;
             font-size: clamp(3.5rem, 10vw + 1rem, 4rem); /* h1 32px */
+            text-transform: lowercase;
             line-height: 110%;
         }
 
@@ -56,6 +57,7 @@ import IconChevronDoubleDown from './icons/IconChevronDoubleDown.vue';
             /* h2 24px font-size */
             font-family: var(--serif);
             font-style: italic;
+            text-transform: lowercase;
             margin-top: .5rem;
             margin-bottom: 1.5em;
         }
@@ -149,23 +151,5 @@ import IconChevronDoubleDown from './icons/IconChevronDoubleDown.vue';
             }
         }
     }
-
-    // background: hsla(212, 12%, 53%, 1);
-
-    // background: linear-gradient(135deg, hsla(212, 12%, 53%, 1) 0%, hsla(346, 10%, 39%, 1) 43%, hsla(276, 11%, 18%, 1) 100%);
-
-    // background: -moz-linear-gradient(135deg, hsla(212, 12%, 53%, 1) 0%, hsla(346, 10%, 39%, 1) 43%, hsla(276, 11%, 18%, 1) 100%);
-
-    // background: -webkit-linear-gradient(135deg, hsla(212, 12%, 53%, 1) 0%, hsla(346, 10%, 39%, 1) 43%, hsla(276, 11%, 18%, 1) 100%);
-
-    // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#778595", endColorstr="#6F5A5F", GradientType=1 );
-    // background: hsla(256, 52%, 55%, 1);
-    // background: radial-gradient(circle, hsla(256, 52%, 55%, 1) 0%, hsla(211, 41%, 53%, 1) 100%);
-
-    // background: -moz-radial-gradient(circle, hsla(256, 52%, 55%, 1) 0%, hsla(211, 41%, 53%, 1) 100%);
-
-    // background: -webkit-radial-gradient(circle, hsla(256, 52%, 55%, 1) 0%, hsla(211, 41%, 53%, 1) 100%);
-
-    // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#7252c8", endColorstr="#5786b9", GradientType=1 );
 }
 </style>
