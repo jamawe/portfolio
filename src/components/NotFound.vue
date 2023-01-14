@@ -12,7 +12,7 @@
 .found {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 15% 5%;
@@ -20,7 +20,6 @@
     &__title {
         font-size: 4rem;
         font-family: var(--monospace);
-        // text-align: center;
         margin-bottom: 2rem;
     }
 
@@ -32,16 +31,16 @@
 
     &__link {
         color: var(--textInverse);
-                    background-color: var(--surfaceInverse);
-                    text-decoration: none;
-                    border-radius: .25rem;
-                    padding: .5rem 1.5rem;
-                    margin-left: .75rem;
-                    margin-right: .75rem;
+        background-color: var(--surfaceInverse);
+        text-decoration: none;
+        border-radius: .25rem;
+        padding: .5rem 1.5rem;
+        margin-left: .75rem;
+        margin-right: .75rem;
 
-                    &:hover {
-                        background-color: var(--surfaceInverseHover);
-                    }
+        &:hover {
+            background-color: var(--surfaceInverseHover);
+        }
     }
 
 }
