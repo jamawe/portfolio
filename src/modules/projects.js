@@ -51,7 +51,7 @@ const projects = [
                 links: [
                     {
                         text: 'Live Demo',
-                        href: 'vuews.janawernick.dev'
+                        href: 'https://vuews.janawernick.dev'
                     },
                     {
                         text: 'GitHub',
