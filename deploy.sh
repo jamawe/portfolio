@@ -15,7 +15,7 @@ cp index.html 404.html
 echo > .nojekyll
 
 # if you are deploying to a custom domain
-# echo 'www.example.com' > CNAME
+echo 'janawernick.dev' > CNAME
 
 git init
 git checkout -B main
