@@ -97,7 +97,7 @@ watch(
                     <router-link class="navbar__list__item__link" :to="{ name: 'about' }" title="Über mich">Über</router-link>
                 </li>
                 <li class="navbar__list__item">
-                    <a href="#" class="navbar__list__item__link navbar__list__item__link--no-effect">
+                    <a href="https://github.com/jamawe" class="navbar__list__item__link navbar__list__item__link--no-effect" target="_blank">
                         <IconGitHub class="navbar__list__item__link__icon" />
                     </a>
                 </li>
