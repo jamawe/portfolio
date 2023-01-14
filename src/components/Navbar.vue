@@ -10,7 +10,7 @@ import IconGitHub from './icons/IconGitHub.vue';
 let showMenu = ref(false);
 const route = useRoute();
 let onHomeRoute = ref(true);
-let onProjectRoute = ref(true);
+let showFuzzyBg = ref(true);
 
 let darkTheme = ref(false);
 // Get theme set in localStorage
@@ -50,13 +50,23 @@ watch(
     () => route.name,
     newRoute => {
         onHomeRoute.value = newRoute === 'home' ? true : false;
-        onProjectRoute.value = newRoute === 'project' ? true : false;
+        switch (newRoute) {
+            case 'project':
+                showFuzzyBg.value = true;
+                break;
+            case 'about':
+                showFuzzyBg.value = true;
+                break;
+            default:
+                showFuzzyBg.value = false;
+                break;
+        }
     }
 );
-</script>t
+</script>
 
 <template>
-    <nav class="navbar" :class="{'navbar--scrolled': scrolled, 'navbar--fuzzy-bg': onProjectRoute }">
+    <nav class="navbar" :class="{'navbar--scrolled': scrolled, 'navbar--fuzzy-bg': showFuzzyBg }">
         <div class="navbar__brand">
             <button v-if="!darkTheme" @click="toggleTheme($event)" class="navbar__list__item__button" type="button" data-theme="dark" title="Zu dunklem Modus wechseln">
                 <IconMoon class="navbar__list__item__button__icon navbar__list__item__button__icon" />
