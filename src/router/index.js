@@ -8,8 +8,8 @@ const PageNotFoundView = () => import('../views/PageNotFoundView.vue');
 
 const projectTitles = [
   {
-    name: 'news-api',
-    title: 'News API Projekt',
+    name: 'vuews',
+    title: 'Vuews Projekt',
   },
   {
     name: 'draggable-article',
