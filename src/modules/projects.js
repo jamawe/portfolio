@@ -1,14 +1,14 @@
 const projectList = [
     {
-        name: 'news-api',
-        title: 'News API Projekt',
+        name: 'vuews',
+        title: 'Vuews Projekt',
         description: 'Tagesaktuelle Nachrichten zu verschiedenen Themen mittels der New York Times Article Search API',
         image: {
             src: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/news_grid_dark_nonavbar.jpg',
             alt: 'Vier Screenshots von Artikeln horzizontal nebeneinander.',
         },
         linkGitHub: 'https://github.com/jamawe/vue-news-api-project',
-        linkProject: 'news-api',
+        linkProject: 'vuews',
     },
     {
         name: 'draggable-article',
@@ -35,7 +35,7 @@ const projectList = [
 ]
 const projects = [
     {
-        name: 'news-api',
+        name: 'vuews',
         project: [
             {
                 name: 'headerImage',
@@ -44,7 +44,7 @@ const projects = [
             },
             {
                 name: 'title',
-                content: 'News API\nProjekt'
+                content: 'Vuews Projekt'
             },
             {
                 name: 'links',
@@ -65,7 +65,7 @@ const projects = [
             },
             {
                 name: 'paragraph',
-                content: 'Dieses Projekt stellt nach bestimmten Kriterien Anfragen an die New York Times (NYT) Article Search API und stellt die Ergebnisse in strukturierter Form dar.'
+                content: 'Dies ist ein News API Projekt, das nach bestimmten Kriterien Anfragen an die New York Times (NYT) Article Search API stellt. Die Ergebnisse werden in strukturierter Form als Artikel aufbereitet. Als Kriterien bzw. Filter für Anfragen können z.B. Nachrichtenredaktionen, Schlagwörter oder Kombinationen aus diesen genutzt werden.'
             },
             {
                 name: 'heading',
@@ -90,7 +90,7 @@ const projects = [
             },
             {
                 name: 'paragraph',
-                content: 'Die NYT API lässt 10 Anfragen pro Minute bzw. 4000 pro Tag zu.Mittels einer Vuetify Komponente, die im Kern auf JavaScripts Intersection Observer API basiert, wird, nachdem ein bestimmter Punkt durch Scrollen erreicht wurde, die nächste Page der vorherigen Anfrage  von der NYT API erfragt. Dieser Vorgang geschieht so lange, bis die API eine Fehler über zu viele Requests zurückgibt. Es wird ein Countdown angezeigt, der die Sekunden bis zum nächsten Anfrage-Versuch zeigt. Dies wiederholt sich, bis die Anfrage erfolgreich war und neue Artikel angezeigt werden können.'
+                content: 'Die NYT API lässt zehn Anfragen pro Minute bzw. 4000 pro Tag zu. Mittels einer Vuetify-Komponente, die im Kern auf JavaScripts Intersection Observer API basiert, wird, nachdem ein bestimmter Punkt durch Scrollen erreicht wurde, die nächste Page der vorherigen Anfrage von der NYT API angefragt. Dieser Vorgang geschieht so lange, bis die API einen Fehler mit dem Status-Code 429 über ein ausgereiztes Request-Limit zurückgibt. Es wird ein Countdown angezeigt, der die Sekunden bis zum nächsten Anfrage-Versuch zeigt. Countdown und Anfrage-Versuch wiederholen sich, bis die Anfrage erfolgreich war und neue Artikel angezeigt werden können.'
             },
             {
                 name: 'subheading',
@@ -116,7 +116,7 @@ const projects = [
             },
             {
                 name: 'paragraph',
-                content: 'Das Projekt verfügt über ein Such-Modal, mit dem Artikel mittels eines Stichworts gesucht werden können. Optional können Nachrichtenredaktionen ausgewählt werden, die als Filter für die Suche dienen.Die möglichen Redaktionen stellen eine Vorauswahl dar und lassen sich ebenso im Menü wiederfinden.'
+                content: 'Das Projekt verfügt über ein Such-Modal, mit dem Artikel mittels eines Stichworts gesucht werden können. Optional können Nachrichtenredaktionen ausgewählt werden, die als Filter für die Suche dienen. Die möglichen Redaktionen stellen eine Vorauswahl dar und lassen sich ebenso im Menü wiederfinden.'
             },
             {
                 name: 'image',
@@ -181,7 +181,7 @@ const projects = [
             },
             {
                 name: 'subheading',
-                content: 'Vielseitige Auswahl an Artikel-Abschnitten'
+                content: 'Vielseitige Auswahl von Abschnitts-Typen'
             },
             {
                 name: 'image',
@@ -194,7 +194,7 @@ const projects = [
             },
             {
                 name: 'paragraph',
-                content: 'Bei den Bildern besteht die Besonderheit, dass zwar mehrere in einem Artikel vorkommen können, allerdings nur eines davon zum Titelbild erklärt werden kann. Wird ein Bild als Titelbild ausgewählt, wird diese Funktionalität in den anderen Bild-Abschnitten deaktiviert.'
+                content: 'Bei Bildern besteht die Besonderheit, dass zwar mehrere in einem Artikel vorkommen können, allerdings nur eines davon zum Titelbild erklärt werden kann. Wird ein Bild als Titelbild ausgewählt, wird diese Funktionalität in den anderen Bild-Abschnitten deaktiviert.'
             },
             {
                 name: 'subheading',
