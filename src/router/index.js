@@ -74,13 +74,13 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-
+  
   if (to.meta?.title) window.document.title = to.meta.title;
   
   if (to.params.project) {
     const [projectTitle] = projectTitles.filter(project => project.name === to.params.project);
 
-    window.document.title = projectTitle.title;
+    if (projectTitle) window.document.title = projectTitle.title;
   }
 
   window.document.title += ' — Portfolio Jana Wernick';
