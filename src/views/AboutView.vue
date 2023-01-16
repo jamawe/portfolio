@@ -62,6 +62,9 @@ const stack = [
     <div class="about__body">
       <div class="about__body__section">
         <img class="about__body__section__image about__body__section__image--image1" src="https://portfolio-jamawe.s3.us-east-2.amazonaws.com/asal-lotfi-8ePZbdxnpi0-unsplash.jpg" height="200" width="200" id="image1" />
+        <p class="about__body__section__credits">
+          Photo by <a href="https://unsplash.com/@asal_lotfi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Asal Lotfi</a> on <a href="https://unsplash.com/photos/8ePZbdxnpi0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </p>
         <h2 class="about__body__section__title">Das habe ich studiert</h2>
         <p class="about__body__section__paragraph">
           Meinen Abschluss habe ich Editions- und Dokumentwissenschaft gemacht,
@@ -75,6 +78,9 @@ const stack = [
 
       <div class="about__body__section">
         <img class="about__body__section__image about__body__section__image--image2" src="https://portfolio-jamawe.s3.us-east-2.amazonaws.com/durian-bullet-1_bLJ4BHkXA-unsplash.jpg" height="200" width="200" id="image2" />
+        <p class="about__body__section__credits">
+          Photo by <a href="https://unsplash.com/@durianbullet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Durian Bullet</a> on <a href="https://unsplash.com/photos/1_bLJ4BHkXA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </p>
         <h2 class="about__body__section__title">Das habe ich danach gemacht</h2>
         <p class="about__body__section__paragraph about__body__section__paragraph-centered">
           Mich durchgekämpft &mdash; nicht nur durch einen Dschungel and Online-Kursen (Hi, Udemy! Grüß dich, Youtube!), sondern auch durch eine Meer an Dokumentationen und Coding-Foren (Hello, StackOverflow!), sowie natürlich, zu guter Letzt, über Berge von Selbstzweifeln.
@@ -83,6 +89,9 @@ const stack = [
 
       <div class="about__body__section">
         <img class="about__body__section__image about__body__section__image--image3" src="https://portfolio-jamawe.s3.us-east-2.amazonaws.com/altumcode-FoTs3ntRoIs-unsplash.jpg" height="200" width="200" id="image3" />
+        <p class="about__body__section__credits">
+          Photo by <a href="https://unsplash.com/@altumcode?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">AltumCode</a> on <a href="https://unsplash.com/photos/FoTs3ntRoIs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </p>
         <h2 class="about__body__section__title">Das habe ich dadurch gelernt (bis jetzt)</h2>
         <ul class="about__body__section__list">
           <li class="about__body__section__list__item">Vertraue darauf, Skills on demand lernen zu können</li>
@@ -238,6 +247,20 @@ const stack = [
               transform: translate(170%, -30%);
             }
           }
+        }
+
+        &__credits {
+          // Visually hide sth, source: https://a11y-guidelines.orange.com/en/web/components-examples/accessible-hiding/
+          position: absolute;
+          position: absolute !important;
+          width: 1px !important;
+          height: 1px !important;
+          padding: 0 !important;
+          margin: -1px !important;
+          overflow: hidden !important;
+          clip: rect(0,0,0,0) !important;
+          white-space: nowrap !important;
+          border: 0 !important;
         }
       }
     }
