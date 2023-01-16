@@ -1,8 +1,17 @@
+<script setup>
+defineProps({
+  msg: {
+    type: String,
+    required: true
+  }
+})
+</script>
+
 <template>
 <div class="found">
     <h1 class="found__title">404</h1>
     <p class="found__text">
-        Die angefragte Seite konnte nicht gefunden werden.
+        {{ msg }}
     </p>
     <router-link class="found__link" :to="{ name: 'home' }">Zur Startseite</router-link>
 </div>
@@ -20,7 +29,6 @@
     &__title {
         font-size: 4rem;
         font-family: var(--monospace);
-        margin-bottom: 2rem;
     }
 
     &__text {

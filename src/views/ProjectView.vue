@@ -1,16 +1,20 @@
 <script setup>
 import ProjectTemplate from "../components/ProjectTemplate.vue";
 import NotFound from "../components/NotFound.vue";
+import { ref } from "vue";
 import { useRoute } from 'vue-router';
 import { projects } from '../modules/projects.js';
 const route = useRoute();
 
 const param = route.params.project;
 const i = projects.findIndex(element => element.name === param);
+
+const notFoundMsg = ref('Dieses Projekt existiert (noch) nicht.');
 </script>
 
 <template>
-    <NotFound v-if="i === -1"/>
+    <NotFound v-if="i === -1"
+        :msg="notFoundMsg" />
 
     <ProjectTemplate v-else-if="i !== -1"
     :project="projects[i]" />
