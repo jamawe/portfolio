@@ -24,7 +24,7 @@ defineProps({
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 15% 5%;
+    padding: 15% 5% 40% 5%;
 
     &__title {
         font-size: 4rem;
