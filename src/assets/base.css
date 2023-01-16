@@ -82,7 +82,7 @@
 
   --textInverse: #fef9f3;
   --surfaceInverse: #252323;
-  --surfaceInverseHover: #252323b8;
+  --surfaceInverseHover: #252323e7;
 
   --theme-icon-color-light: #272996; /* TODO: coolors */
   --theme-icon-bg-light: #b8b9e3; /* TODO: coolors */
@@ -108,7 +108,7 @@
   
   --textInverse: #252323;
   --surfaceInverse: #fef9f3;
-  --surfaceInverseHover: #fef9f3e1;
+  --surfaceInverseHover: #fef9f3eb;
 
   --theme-icon-color-light: #c3b884;
   --theme-icon-bg-light: #525041;

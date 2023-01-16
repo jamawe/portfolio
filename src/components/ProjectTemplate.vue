@@ -108,6 +108,8 @@ const url = props.project.project[i].src;
             margin-left: .75rem;
             margin-right: .75rem;
 
+            transition: all 150ms cubic-bezier(.17,.67,1,1.23);
+
             &:hover {
                 background-color: var(--surfaceInverseHover);
             }

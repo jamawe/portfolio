@@ -74,7 +74,8 @@ import IconChevronDoubleDown from './icons/IconChevronDoubleDown.vue';
             border-radius: .25rem;
             padding: .625rem 1.5rem;
             cursor: pointer;
-            transition: background-color 200ms ease-in-out;
+            
+            transition: all 150ms cubic-bezier(.17,.67,1,1.23);
 
             &:hover {
                 background-color: var(--surfaceInverseHover);
