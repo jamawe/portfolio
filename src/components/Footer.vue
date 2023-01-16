@@ -68,7 +68,9 @@ function fallbackCopyEmailToClipboard(email) {
                             <IconCopy class="footer__section__container__row__button__icon" />
                         </button>
                     </div>
-
+                    <div class="footer__section__container__row">
+                        <router-link class="footer__section__container__row__link" :to="{ name: 'legal-info' }">Impressum</router-link>
+                    </div>
             </div>
         </div>
 

@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const HomeView = () => import('../views/HomeView.vue');
 const AboutView = () => import('../views/AboutView.vue');
-const ContactView = () => import('../views/ContactView.vue');
+const LegalInfoView = () => import('../views/LegalInfoView.vue');
 const ProjectView = () => import('../views/ProjectView.vue');
 const PageNotFoundView = () => import('../views/PageNotFoundView.vue');
 
@@ -39,6 +39,14 @@ const router = createRouter({
       component: AboutView,
       meta: {
         title: 'Über mich',
+      },
+    },
+    {
+      path: '/legal-info',
+      name: 'legal-info',
+      component: LegalInfoView,
+      meta: {
+        title: 'Impressum',
       },
     },
     {
