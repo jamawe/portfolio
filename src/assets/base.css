@@ -84,9 +84,11 @@
   --surfaceInverse: #252323;
   --surfaceInverseHover: #252323b8;
 
-  --theme-icon-color-light: #202256; /* TODO: coolors */
+  --theme-icon-color-light: #272996; /* TODO: coolors */
   --theme-icon-bg-light: #b8b9e3; /* TODO: coolors */
   --theme-icon-color-intense: #1a1fa3; /* TODO: coolors */
+
+  --accent: #503a6a;
 }
 
 :root[color-theme="dark"] {
@@ -108,9 +110,11 @@
   --surfaceInverse: #fef9f3;
   --surfaceInverseHover: #fef9f3e1;
 
-  --theme-icon-color-light: #ddc23c;
+  --theme-icon-color-light: #c3b884;
   --theme-icon-bg-light: #525041;
   --theme-icon-color-intense: #e6c000;
+
+  --accent: #c0b1d6;
 }
 
 *,
