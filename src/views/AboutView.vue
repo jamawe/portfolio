@@ -61,7 +61,7 @@ const stack = [
 
     <div class="about__body">
       <div class="about__body__section">
-        <img class="about__body__section__image about__body__section__image--image1" src="https://portfolio-jamawe.s3.us-east-2.amazonaws.com/asal-lotfi-8ePZbdxnpi0-unsplash.jpg" height="200" width="200" id="image1" />
+        <img class="about__body__section__image about__body__section__image--image1" src="https://portfolio-jamawe.s3.us-east-2.amazonaws.com/asal-lotfi-8ePZbdxnpi0-unsplash.jpg" height="200" width="200" id="image1" alt="Ein Bücherstapel vor einer weißen Wand, auf den gebrochenes Sonnenlicht fällt." />
         <p class="about__body__section__credits">
           Photo by <a href="https://unsplash.com/@asal_lotfi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Asal Lotfi</a> on <a href="https://unsplash.com/photos/8ePZbdxnpi0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
         </p>
@@ -77,7 +77,7 @@ const stack = [
       </div>
 
       <div class="about__body__section">
-        <img class="about__body__section__image about__body__section__image--image2" src="https://portfolio-jamawe.s3.us-east-2.amazonaws.com/durian-bullet-1_bLJ4BHkXA-unsplash.jpg" height="200" width="200" id="image2" />
+        <img class="about__body__section__image about__body__section__image--image2" src="https://portfolio-jamawe.s3.us-east-2.amazonaws.com/durian-bullet-1_bLJ4BHkXA-unsplash.jpg" height="200" width="200" id="image2" alt="Blätter einer Bananenstaude im Sonnenlicht vor blauem Himmel." />
         <p class="about__body__section__credits">
           Photo by <a href="https://unsplash.com/@durianbullet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Durian Bullet</a> on <a href="https://unsplash.com/photos/1_bLJ4BHkXA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
         </p>
@@ -88,7 +88,7 @@ const stack = [
       </div>
 
       <div class="about__body__section">
-        <img class="about__body__section__image about__body__section__image--image3" src="https://portfolio-jamawe.s3.us-east-2.amazonaws.com/altumcode-FoTs3ntRoIs-unsplash.jpg" height="200" width="200" id="image3" />
+        <img class="about__body__section__image about__body__section__image--image3" src="https://portfolio-jamawe.s3.us-east-2.amazonaws.com/altumcode-FoTs3ntRoIs-unsplash.jpg" height="200" width="200" id="image3" alt="Ein augeklappter Laptop auf einem Holztisch vor einer weißen Wand, auf dem eon Coding-Editor geöffnet ist." />
         <p class="about__body__section__credits">
           Photo by <a href="https://unsplash.com/@altumcode?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">AltumCode</a> on <a href="https://unsplash.com/photos/FoTs3ntRoIs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
         </p>
