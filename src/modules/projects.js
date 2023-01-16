@@ -125,7 +125,7 @@ const projects = [
             },
             {
                 name: 'paragraph',
-                content: 'Nach erfolgter Suchanfrage über das Modal wird auf eine Seite mit den Suchergebnissen weitergeleitet. Dort besteht durch eine ausklappbare Dropdown-Suchform die Möglichkeit, die Suche anzupassen.'
+                content: 'Nach erfolgter Suchanfrage über das Modal wird auf eine Seite mit den Suchergebnissen weitergeleitet. Dort besteht über eine ausklappbare Dropdown-Suchform die Möglichkeit, die Suche anzupassen.'
             },
         ]
     },
@@ -165,7 +165,7 @@ const projects = [
             },
             {
                 name: 'paragraph',
-                content: 'Dieses Projekt verwendet VueDraggable.next, die Vue3-Version des SortableJS Packages, für eine dynamische Artikelerstellung. Es besteht zum einen aus einer Form, in der Abschnitte des Artikels sowohl erstellt als auch ihre Positionierung innerhalb des Artikels geändert werden können. Zum anderen wird in einer Vorschau der aktuelle Stand des Artikels angezeigt.'
+                content: 'Dieses Projekt verwendet VueDraggable.next, die Vue3-Version des SortableJS Packages, für eine dynamische Artikelerstellung. Es besteht aus einer Form, in der Abschnitte des Artikels sowohl erstellt als auch ihre Positionierung innerhalb des Artikels geändert werden können. Der aktuelle Stand des Artikels wird ständig in einer Vorschau angezeigt.'
             },
             {
                 name: 'heading',
@@ -215,7 +215,7 @@ const projects = [
             },
             {
                 name: 'paragraph',
-                content: 'Selbstverständlich wird beim Verschieben eines Abschnittes dessen Position auch in der Artikel-Vorschau angepasst. Da diese von der Artikel-Form abgeleitet wird, ist momentan nur das Verschieben von Form- und nicht von Vorschau-Abschnitten möglich.'
+                content: 'Selbstverständlich wird beim Verschieben eines Abschnittes dessen Position auch in der Artikel-Vorschau angepasst.'
             },
             {
                 name: 'subheading',
