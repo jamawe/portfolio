@@ -145,15 +145,14 @@ import { projectList } from "../modules/projects.js";
                         left: 0;
                         width: 100%;
                         height: 100%;
-                        background-color: hsla(0, 0%, 28%, .2);
                         border-radius: .25rem;
 
-                        transition: opacity 150ms ease-in-out;
+                        transition: all 200ms ease-in-out;
                     }
 
                     &:hover {
                         &::after {
-                            opacity: 0;
+                            background-color: hsla(0, 0%, 28%, .3);
                         }
                     }
                 }
