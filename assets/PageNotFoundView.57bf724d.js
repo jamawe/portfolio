@@ -1,0 +1,1 @@
+import{N as n}from"./NotFound.8cb62d89.js";import{l as o,o as t,i as a}from"./index.76fb8d0f.js";const m={__name:"PageNotFoundView",setup(r){const e=o("Die angefragte Seite konnte nicht gefunden werden.");return(s,c)=>(t(),a(n,{msg:e.value},null,8,["msg"]))}};export{m as default};
