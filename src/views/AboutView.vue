@@ -43,7 +43,7 @@ onMounted(() => {
 
 const stack = [
   'JavaScript',
-  'Vue',
+  'VueJS (2 + 3)',
   'HTML',
   'Vue Router',
   'Vuex',
@@ -195,22 +195,23 @@ const stack = [
         &__list {
           color: var(--text-grey);
           list-style-type: '— ';
-          list-style-position: inside;
+          list-style-position: outside;
           font-size: 1.125rem; // 18px
           line-height: 180%;
+          padding-right: 2%;
         }
 
         &__image {
           opacity: 0;
           position: absolute;
           border-radius: 50%;
-          height: 250px;
-          width: 250px;
+          height: 150px;
+          width: 150px;
           filter: grayscale(0%);
           transition: all 2000ms cubic-bezier(.11,.56,.65,.72);
 
           &--image1 {
-            transform: translate(80%, 0%);
+            transform: translate(175%, 0%);
           }
 
           &--image2 {
@@ -218,10 +219,13 @@ const stack = [
           }
 
           &--image3 {
-            transform: translate(80%, -30%);
+            transform: translate(175%, -30%);
           }
 
           @include tablet {
+            height: 250px;
+            width: 250px;
+
             &--image1 {
               transform: translate(170%, 0%);
             }
@@ -241,8 +245,12 @@ const stack = [
     &__footer {
       display: flex;
       justify-content: center;
-      margin-top: 4rem;
+      margin-top: 3rem;
       margin-bottom: 2rem;
+
+      @include tablet {
+        margin-top: 4rem;
+      }
 
       &__image {
         height: 250px;
@@ -256,19 +264,19 @@ const stack = [
   }
 .visible1 {
   opacity: 1;
-  transform: translate(-50%, 120%);
+  transform: translate(-50%, 275%);
   // filter: grayscale(100%);
 }
 
 .visible2 {
   opacity: 1;
-  transform: translate(80%, 120%);
+  transform: translate(175%, 250%);
   // filter: grayscale(100%);
 }
 
 .visible3 {
   opacity: 1;
-  transform: translate(-50%, 120%);
+  transform: translate(-50%, 250%);
   // filter: grayscale(100%);
 }
 
