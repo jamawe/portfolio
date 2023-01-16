@@ -78,10 +78,10 @@ watch(
          <div class="navbar__toggle">
             <Transition name="slide-down" mode="out-in">
                 <button v-if="!showMenu" @click="showMenu = !showMenu" class="navbar__toggle__button" type="button">
-                        <IconMenu />
+                        <IconMenu class="navbar__toggle__button__icon" />
                 </button>
                 <button v-else-if="showMenu" @click="showMenu = !showMenu" class="navbar__toggle__button" type="button">
-                        <IconClose />
+                        <IconClose class="navbar__toggle__button__icon" />
                 </button>
             </Transition>
         </div>
@@ -159,11 +159,18 @@ watch(
                 background-color: transparent;
                 padding: 0;
                 border: none;
+                border-radius: 50%;
                 cursor: pointer;
 
-                svg {
+                &__icon {
                     height: var(--navbar-toggle-button-size);
                     width: var(--navbar-toggle-button-size);
+
+                    transition: all 150ms cubic-bezier(.17,.67,1,1.23);
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
                 }
             }
 
@@ -221,6 +228,13 @@ watch(
                     &__icon {
                         border-radius: 50%;
                         margin-top: .5rem;
+
+                        transition: all 150ms cubic-bezier(.17,.67,1,1.23);
+
+                        &:hover {
+                            outline: .5px solid var(--text);
+                            outline-offset: .25rem;
+                        }
                     }
 
                     &::after {
@@ -250,10 +264,6 @@ watch(
                         transform: scale(0);
                         transition: transform 150ms ease-in-out;
                     }
-
-                    // &--no-effect:hover {
-                        // TODO color
-                    // }
                 }
 
                 &__button {
@@ -266,25 +276,6 @@ watch(
                     cursor: pointer;
                     z-index: 1;
 
-                    &::before {
-                        content: '';
-                        background-color: var(--theme-icon-bg-light); /* TODO: colors! */
-                        position: absolute;
-                        left: 0;
-                        right: 0;
-                        top: 0;
-                        bottom: 0;
-                        border-radius: 50%;
-                        width: 100%;
-                        height: 100%;
-                        transform: scale(0);
-                        transition: all 200ms cubic-bezier(.17,.67,1,1.23);
-                    }
-
-                    &:hover::before {
-                        transform: scale(1);
-                    }
-
                     &__icon {
                         position: absolute;
                         top: calc(calc(1.5rem - 1.125rem) / 2);
@@ -293,6 +284,14 @@ watch(
                         width: 1.125rem;
                         border-radius: 50%;
                         color: var(--theme-icon-color-light);
+
+                        transition: all 200ms cubic-bezier(.17,.67,1,1.23);
+
+                        &:hover {
+                            color: var(--theme-icon-color-light);
+                            outline: .5px solid var(--theme-icon-color-light);
+                            outline-offset: .25rem;
+                        }
                     }
                 }
             }

@@ -148,6 +148,12 @@ import IconChevronDoubleDown from './icons/IconChevronDoubleDown.vue';
             &__icon {
                 height: 1.375rem;
                 width: 1.375rem;
+
+                transition: all 150ms cubic-bezier(.17,.67,1,1.23);
+
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
         }
     }

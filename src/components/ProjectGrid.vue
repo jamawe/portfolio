@@ -162,28 +162,41 @@ import { projectList } from "../modules/projects.js";
                     display: flex;
                     justify-content: space-between;
                     align-items: flex-end;
-                    bottom: -5%;
+                    bottom: -10%;
                     right: 5%;
-                    width: 100px;
+                    width: 135px;
                     height: 3rem;
                     z-index: 1;
 
                     &__link {
                         position: relative;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        height: 40px;
-                        width: 40px;
+                        display: grid;
+                        place-items: center;
+                        height: 60px;
+                        width: 60px;
                         border-radius: 50%;
                         background-color: var(--surface1); // TODO: colors
 
                         &__icon {
-                            color: var(--text); // TODO: color
+                            color: var(--text);
                             background-color: var(--surface1);
                             border-radius: 50%;
-                            height: 28px;
-                            width: 28px;
+                            height: 40px;
+                            width: 40px;
+
+                            transition: all 200ms cubic-bezier(.17,.67,1,1.23);
+
+                            @include tablet {
+                                color: var(--text);
+                                height: 35px;
+                                width: 35px;
+                            }
+
+                            &:hover, :focus {
+                                // color: var(--accent);
+                                outline: 2px solid var(--text);
+                                outline-offset: .33rem;
+                            }
                         }
                     }
 

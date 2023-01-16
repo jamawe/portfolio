@@ -53,7 +53,7 @@ function fallbackCopyEmailToClipboard(email) {
             <div class="footer__section__container">
                     <div class="footer__section__container__row">
                         <a class="footer__section__container__row__link" href="https://github.com/jamawe" target="_blank">
-                            <IconGitHub class="footer__section__container__row__link__icon " />
+                            <IconGitHub class="footer__section__container__row__link__icon" />
                         </a>
                     </div>
                     <div class="footer__section__container__row">
@@ -192,6 +192,13 @@ function fallbackCopyEmailToClipboard(email) {
                         border-radius: 50%;
                         height: 29px;
                         width: 29px;
+
+                        transition: all 150ms cubic-bezier(.17,.67,1,1.23);
+
+                        &:hover {
+                            outline: .5px solid var(--text);
+                            outline-offset: .25rem;
+                        }
                     }
 
                     // &:hover TODO color
@@ -207,24 +214,24 @@ function fallbackCopyEmailToClipboard(email) {
                     cursor: pointer;
                     margin-bottom: .5rem;
 
-                    &::before {
-                        content: '';
-                        background-color: var(--theme-icon-bg-light); /* TODO: colors! */
-                        position: absolute;
-                        left: 0;
-                        right: 0;
-                        top: 0;
-                        bottom: 0;
-                        border-radius: 50%;
-                        width: 100%;
-                        height: 100%;
-                        transform: scale(0);
-                        transition: all 200ms cubic-bezier(.17,.67,1,1.23);
-                    }
+                    // &::before {
+                    //     content: '';
+                    //     background-color: var(--theme-icon-bg-light); /* TODO: colors! */
+                    //     position: absolute;
+                    //     left: 0;
+                    //     right: 0;
+                    //     top: 0;
+                    //     bottom: 0;
+                    //     border-radius: 50%;
+                    //     width: 100%;
+                    //     height: 100%;
+                    //     transform: scale(0);
+                    //     transition: all 200ms cubic-bezier(.17,.67,1,1.23);
+                    // }
 
-                    &:hover::before {
-                        transform: scale(1);
-                    }
+                    // &:hover::before {
+                    //     transform: scale(1);
+                    // }
 
                     &__icon {
                         position: absolute;
@@ -233,6 +240,13 @@ function fallbackCopyEmailToClipboard(email) {
                         height: 1.25rem;
                         width: 1.25rem;
                         border-radius: 50%;
+
+                        transition: all 150ms cubic-bezier(.17,.67,1,1.23);
+
+                        &:hover {
+                            outline: .5px solid var(--text);
+                            outline-offset: .25rem;
+                        }
                     }
                 }
 
