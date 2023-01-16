@@ -117,15 +117,13 @@ const url = props.project.project[i].src;
     &__body {
         display: flex;
         justify-content: center;
-        padding-left: 2.5%;
-        padding-right: 2.5%;
+        padding-left: min(5%, 18px);
+        padding-right: min(5%, 18px);
         margin-left: auto;
         margin-right: auto;
         max-width: 50ch;
 
         @include tablet {
-            // padding-left: 0;
-            // padding-right: 0;
             max-width: 70ch;
         }
 
