@@ -87,7 +87,7 @@ import { projectList } from "../modules/projects.js";
             flex-direction: column;
 
             width: 90%;
-            height: min(50vh, 600px); // default, largest // TODO: responsiveness
+            //height: min(50vh, 600px); // default, largest // TODO: responsiveness
             margin-bottom: 20%;
 
             &:nth-of-type(2n) {
@@ -128,7 +128,7 @@ import { projectList } from "../modules/projects.js";
             &__body {
                 position: relative;
                 width: 100%;
-                flex-grow: 1;
+                height: clamp(250px, 25vh, 300px);
 
                 &__image {
                     position: absolute;
