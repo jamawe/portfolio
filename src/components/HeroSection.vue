@@ -30,20 +30,25 @@ import IconChevronDoubleDown from './icons/IconChevronDoubleDown.vue';
 <style scoped lang="scss">
 .hero {
     position: relative;
-    height: 95vh;
+    height: clamp(450px, 95vh, 1000px);
     display: flex;
     justify-content: center;
     align-items: center;
 
-    @include tablet {
-        height: 100vh;
-    }
-
     &__body {
-        padding-left: 5%;
-        padding-right: 5%;
-        margin-top: 20vh;
-        margin-bottom: 25vh;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-top: 48px;
+        margin-bottom: 36px;
+
+        @include landscape {
+            display: grid;
+            grid-template-areas: 
+            'title link'
+            'title link'
+            'subtitle link';
+            column-gap: 4rem;
+        }
 
         &__title {
             // font-family: Arial, Helvetica, sans-serif;
@@ -51,6 +56,11 @@ import IconChevronDoubleDown from './icons/IconChevronDoubleDown.vue';
             font-size: clamp(3.5rem, 10vw + 1rem, 4rem); /* h1 32px */
             text-transform: lowercase;
             line-height: 110%;
+
+            @include landscape {
+                grid-area: title;
+                font-size: clamp(2.5rem, 5vw, 4rem);
+            }
         }
 
         &__subtitle {
@@ -60,6 +70,15 @@ import IconChevronDoubleDown from './icons/IconChevronDoubleDown.vue';
             text-transform: lowercase;
             margin-top: .5rem;
             margin-bottom: 1.5em;
+
+            @include landscape {
+                display: inline-block;
+                grid-area: subtitle;
+                align-self: flex-end;
+
+                font-size: clamp(20px, 4vw, 25px);
+
+            }
         }
 
         &__link {
@@ -79,6 +98,14 @@ import IconChevronDoubleDown from './icons/IconChevronDoubleDown.vue';
 
             &:hover {
                 background-color: var(--surfaceInverseHover);
+            }
+
+            @include landscape {
+                grid-area: link;
+                align-self: center;
+
+                font-size: 1rem;
+                padding: .5rem 1.125rem;
             }
         }
     }
