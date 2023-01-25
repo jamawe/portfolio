@@ -91,7 +91,7 @@ router.beforeEach((to, from, next) => {
     if (projectTitle) window.document.title = projectTitle.title;
   }
 
-  window.document.title += ' — Portfolio Jana Wernick';
+  window.document.title += ' — Jana Wernick | Frontend Development';
 
   return next();
 });
