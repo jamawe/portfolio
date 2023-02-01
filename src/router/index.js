@@ -82,16 +82,17 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  
+  // Set title
   if (to.meta?.title) window.document.title = to.meta.title;
-  
   if (to.params.project) {
     const [projectTitle] = projectTitles.filter(project => project.name === to.params.project);
-
     if (projectTitle) window.document.title = projectTitle.title;
   }
-
   window.document.title += ' — Jana Wernick | Frontend Development';
+
+  // Set canonical link
+  const canonicalLink = document.querySelector('[data-canonical]');
+  canonicalLink.href = `https://janawernick.dev${to.fullPath}`;
 
   return next();
 });
