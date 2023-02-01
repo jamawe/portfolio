@@ -52,7 +52,7 @@ function fallbackCopyEmailToClipboard(email) {
             <h4 class="footer__section__title">Kontakt</h4>
             <div class="footer__section__container">
                     <div class="footer__section__container__row">
-                        <a class="footer__section__container__row__link" href="https://github.com/jamawe" target="_blank">
+                        <a class="footer__section__container__row__link" href="https://github.com/jamawe">
                             <IconGitHub class="footer__section__container__row__link__icon" />
                         </a>
                     </div>

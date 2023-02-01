@@ -4,6 +4,6 @@ const { links } = defineProps(['links']);
 
 <template>
     <div class="project__links">
-        <a v-for="(link, i) in links" :key="i" class="project__links__item" :href="link.href" target="_blank">{{ link.text }}</a>
+        <a v-for="(link, i) in links" :key="i" class="project__links__item" :href="link.href">{{ link.text }}</a>
     </div>
 </template>
