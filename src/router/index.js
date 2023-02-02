@@ -6,18 +6,21 @@ const LegalInfoView = () => import('../views/LegalInfoView.vue');
 const ProjectView = () => import('../views/ProjectView.vue');
 const PageNotFoundView = () => import('../views/PageNotFoundView.vue');
 
-const projectTitles = [
+const projectMeta = [
   {
     name: 'vuews',
     title: 'Vuews Projekt',
+    description: 'Vuews stellt mittels NYT Article Search API tagesaktuelle Nachrichten in aufbereiteter Form dar. Finde heraus, was das Projekt sonst noch so kann!'
   },
   {
     name: 'draggable-article',
     title: 'Draggable Article Projekt',
+    description: 'Erstelle mit VueDraggable.next individuelle Artikel mit verschiebbaren Abschnitten und schaue sie dir in einer Vorschau an. Probier es jetzt aus!'
   },
   {
     name: 'trainer-codes',
     title: 'Trainer Codes Projekt',
+    description: 'Leicht Freunde finden für Pokemon GO Spieler! Entdecke ein Projekt, das Freundes-Codes in aufbereiter Form und für alle Endgeräte leicht zugänglich darstellt.'
   },
 ];
 
@@ -31,6 +34,8 @@ const router = createRouter({
       component: HomeView,
       meta: {
         title: 'Home',
+        description: 'Moderne Frontend Entwicklung mit VueJS als leitendes SPA-Framework, Vue Router, Vuex, HTML, CSS, Bootstrap und Tailwind CSS. Entdecke mein Portfolio!',
+        url: 'https://janawernick.dev',
       },
     },
     {
@@ -39,6 +44,8 @@ const router = createRouter({
       component: AboutView,
       meta: {
         title: 'Über mich',
+        description: 'Moderne Frontend Entwicklung mit VueJS. Erfahre mehr über mich als Person, mein Stack und meinen Weg.',
+        url: 'https://janawernick.dev/about',
       },
     },
     {
@@ -47,6 +54,8 @@ const router = createRouter({
       component: LegalInfoView,
       meta: {
         title: 'Impressum',
+        description: 'Moderne Frontend Entwicklung mit VueJS als leitendes SPA-Framework, Vue Router, Vuex, HTML, CSS, Bootstrap und Tailwind CSS. Entdecke mein Portfolio!',
+        url: 'https://janawernick.dev/legal-info',
       },
     },
     {
@@ -82,17 +91,25 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  // Set title
-  if (to.meta?.title) window.document.title = to.meta.title;
-  if (to.params.project) {
-    const [projectTitle] = projectTitles.filter(project => project.name === to.params.project);
-    if (projectTitle) window.document.title = projectTitle.title;
-  }
-  window.document.title += ' — Jana Wernick | Frontend Development';
-
-  // Set canonical link
+  const metaDescription = document.querySelector('[data-meta-description]');
+  const ogDescription = document.querySelector('[data-og-description]');
+  const ogTitle = document.querySelector('[data-og-title]');
+  const ogURL = document.querySelector('[data-og-url]');
   const canonicalLink = document.querySelector('[data-canonical]');
-  canonicalLink.href = `https://janawernick.dev${to.fullPath}`;
+
+  const titleExtended = ' | Frontend Development — Jana Wernick';
+
+  if (Object.keys(to.meta).length > 0) {
+    window.document.title = ogTitle.content = `${to.meta.title}${titleExtended}`;
+    metaDescription.content = ogDescription.content = to.meta.description;
+  } else if (Object.keys(to.meta).length === 0) {
+    // Since filter will return only one element take the first
+    const [project] = projectMeta.filter(project => project.name === to.params.project);
+    window.document.title = ogTitle.content = `${project.title}${titleExtended}`;
+    metaDescription.content = ogDescription.content = project.description;
+  }
+
+  canonicalLink.href = ogURL.content = `https://janawernick.dev${to.fullPath}`;
 
   return next();
 });
