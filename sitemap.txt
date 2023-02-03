@@ -1,6 +1,6 @@
 https://janawernick.dev/
-https://janawernick.dev/?/about
-https://janawernick.dev/?/legal-info
-https://janawernick.dev/?/projects/vuews
-https://janawernick.dev/?/projects/draggable-article
-https://janawernick.dev/?/projects/trainer-codes
+https://janawernick.dev/about
+https://janawernick.dev/legal-info
+https://janawernick.dev/projects/vuews
+https://janawernick.dev/projects/draggable-article
+https://janawernick.dev/projects/trainer-codes
