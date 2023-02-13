@@ -47,7 +47,7 @@ const stack = [
   'HTML',
   'Vue Router',
   'Vuex',
-  'CSS (Sass)',
+  'CSS (SCSS)',
   'TailwindCSS',
   'Bootstrap',
   'Vuetify'
@@ -83,7 +83,7 @@ const stack = [
         </p>
         <h2 class="about__body__section__title">Das habe ich danach gemacht</h2>
         <p class="about__body__section__paragraph about__body__section__paragraph-centered">
-          Mich durchgekämpft &mdash; nicht nur durch einen Dschungel and Online-Kursen (Hi, Udemy! Grüß dich, Youtube!), sondern auch durch eine Meer an Dokumentationen und Coding-Foren (Hello, StackOverflow!), sowie natürlich, zu guter Letzt, über Berge von Selbstzweifeln.
+          Mich durchgekämpft &mdash; nicht nur durch einen Dschungel an Online-Kursen (Hi, Udemy! Grüß dich, Youtube!), sondern auch durch eine Meer an Dokumentationen und Coding-Foren (Hello, StackOverflow!), sowie natürlich, zu guter Letzt, über Berge von Selbstzweifeln.
         </p>
       </div>
 
