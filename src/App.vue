@@ -1,7 +1,35 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router';
+import { RouterView} from 'vue-router';
 import Navbar from './components/Navbar.vue';
 import Footer from './components/Footer.vue';
+import { useHead } from '@vueuse/head';
+
+useHead({
+  titleTemplate: '%s Jana Wernick — Frontend Development',
+  meta: [
+    { charset: 'utf-8' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+    { 'http-equiv': 'x-ua-compatible', content: 'IE=edge' },
+    { name: 'description', content: 'Moderne Frontend Entwicklung mit VueJS als leitendes SPA-Framework, Vue Router, Vuex, HTML, CSS, Bootstrap und Tailwind CSS. Entdecke mein Portfolio!' },
+    { name: 'author', content: 'Jana Wernick' },
+
+    // OG
+    { property: 'og:title', content: 'Jana Wernick — Frontend Development' },
+    { property: 'og:description', content: 'Moderne Frontend Entwicklung mit VueJS als leitendes SPA-Framework, Vue Router, Vuex, HTML, CSS, Bootstrap und Tailwind CSS. Entdecke mein Portfolio!' },
+    { property: 'og:image', content: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/portfolio_og_android-chrome-512x512.png' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: `https://janawernick.dev` },
+  ],
+  link: [
+    { rel: 'canonical', href: `https://janawernick.dev` },
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+    { rel: 'apple-touch-icon', type: 'image/png', href: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/portfolio_apple-touch-icon.png' },
+    { rel: 'icon', type: 'image/png', sizes: '16x16', href: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/portfolio_favicon-16x16.png' },
+    { rel: 'icon', type: 'image/png', sizes: '32x32', href: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/portfolio_favicon-32x32.png' },
+    { rel: 'icon', type: 'image/png', sizes: '192x192', href: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/portfolio_android-chrome-192x192.png' },
+    { rel: 'icon', type: 'image/png', sizes: '512x512', href: 'https://portfolio-jamawe.s3.us-east-2.amazonaws.com/portfolio_android-chrome-512x512.png' },
+  ]
+});
 </script>
 
 <template>

@@ -1,6 +1,24 @@
 <script setup>
-import { onMounted, ref } from "vue";
-import IconDownload from "../components/icons/IconDownload.vue";
+import { onMounted } from "vue";
+import { useHead } from '@vueuse/head';
+import { useRoute } from 'vue-router';
+
+const { fullPath, meta } = useRoute();
+const { title, description } = meta;
+
+useHead({
+  title: `${title} | `,
+  meta: [
+    { name: 'description', content: description },
+    { property: 'og:title', content: `${title} | Jana Wernick — Frontend Development` },
+    { property: 'og:description', content: description },
+    { property: 'og:url', content: `https://janawernick.dev${fullPath}` }
+  ],
+  link: [
+    { rel: 'canonical', href: `https://janawernick.dev${fullPath}` }
+  ]
+});
+
 let controller = new ScrollMagic.Controller();
 const image1 = new ScrollMagic.Scene({
   triggerHook: .3,

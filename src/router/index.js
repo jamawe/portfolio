@@ -49,7 +49,7 @@ const router = createRouter({
       },
     },
     {
-      path: '/legal-info',
+      path: '/impressum',
       name: 'legal-info',
       component: LegalInfoView,
       meta: {
@@ -88,30 +88,6 @@ const router = createRouter({
       return { top: 0 }
     }
   },
-});
-
-router.beforeEach((to, from, next) => {
-  const metaDescription = document.querySelector('[data-meta-description]');
-  const ogDescription = document.querySelector('[data-og-description]');
-  const ogTitle = document.querySelector('[data-og-title]');
-  const ogURL = document.querySelector('[data-og-url]');
-  const canonicalLink = document.querySelector('[data-canonical]');
-
-  const titleExtended = ' | Frontend Development — Jana Wernick';
-
-  if (Object.keys(to.meta).length > 0) {
-    window.document.title = ogTitle.content = `${to.meta.title}${titleExtended}`;
-    metaDescription.content = ogDescription.content = to.meta.description;
-  } else if (Object.keys(to.meta).length === 0) {
-    // Since filter will return only one element take the first
-    const [project] = projectMeta.filter(project => project.name === to.params.project);
-    window.document.title = ogTitle.content = `${project.title}${titleExtended}`;
-    metaDescription.content = ogDescription.content = project.description;
-  }
-
-  canonicalLink.href = ogURL.content = `https://janawernick.dev${to.fullPath}`;
-
-  return next();
 });
 
 export default router
