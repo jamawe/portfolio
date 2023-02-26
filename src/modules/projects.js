@@ -259,10 +259,10 @@ const projects = [
             {
                 name: 'links',
                 links: [
-                    // {
-                    //     text: 'Live Demo',
-                    //     href: '#'
-                    // },
+                    {
+                        text: 'Live Demo',
+                        href: 'https://tc.janawernick.dev'
+                    },
                     {
                         text: 'GitHub',
                         href: 'https://github.com/Grischa89/tc_vue_1'
